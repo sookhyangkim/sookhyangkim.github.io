@@ -94,6 +94,21 @@
   footer a{color:var(--ink-soft);text-decoration:none;font-size:14px;border-bottom:1px solid transparent;transition:.3s;}
   footer a:hover{color:var(--accent-deep);border-color:var(--accent);}
   footer .cr{font-size:12.5px;letter-spacing:.04em;}
+  .cform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+  .cform-row{display:flex;gap:14px;margin-bottom:14px;}
+  .cform-field{flex:1;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .cform-row .cform-field{margin-bottom:0;}
+  .clabel{font-size:13px;color:var(--ink-soft);font-weight:500;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:9px;background:#fff;padding:10px 12px;font-size:15px;font-family:var(--body);color:var(--ink);box-sizing:border-box;transition:border-color .2s;}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);}
+  .cform textarea{resize:vertical;line-height:1.6;}
+  .cform-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px;flex-wrap:wrap;}
+  .cform-note{font-size:12.5px;color:var(--muted);}
+  .cform-btn{background:var(--accent);color:#fff;border:none;border-radius:999px;padding:11px 26px;font-size:15px;font-weight:700;font-family:var(--display);cursor:pointer;transition:background .25s ease,transform .2s ease;}
+  .cform-btn:hover{background:var(--accent-deep);transform:translateY(-1px);}
+  .cform-btn:disabled{opacity:.6;cursor:default;transform:none;}
+  .cform-status{font-size:14px;margin:14px 0 0;font-weight:500;}
+  @media (max-width:560px){.cform-row{flex-direction:column;gap:0;}}
   .ph{color:var(--accent-deep);}
   .reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;}
   .d1{animation-delay:.05s}.d2{animation-delay:.18s}
@@ -113,6 +128,7 @@
       <a href="#pubs"><span class="ko">논문</span><span class="en">Articles</span></a>
       <a href="#books"><span class="ko">저·역서</span><span class="en">Books</span></a>
       <a href="#teaching"><span class="ko">강의</span><span class="en">Teaching</span></a>
+      <a href="#contact"><span class="ko">쪽지</span><span class="en">Contact</span></a>
     </nav>
     <div class="lang">
       <button id="btn-ko" class="active" onclick="setLang('ko')">KO</button><span class="sep">/</span><button id="btn-en" onclick="setLang('en')">EN</button>
@@ -176,6 +192,37 @@
     <ul class="simple">
       <li><b><span class="ko">중국 인문 텍스트와 디지털 큐레이션</span><span class="en">Chinese Humanities Texts &amp; Digital Curation</span></b> <span class="ko">· 고전 텍스트를 디지털 방법으로 큐레이팅하는 융복합 강의</span><span class="en">· An interdisciplinary course on curating classical texts with digital methods</span></li>
     </ul>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head"><span class="num">08</span><h2><span class="ko">쪽지 보내기</span><span class="en">Send a Note</span></h2></div>
+    <p style="color:var(--muted);font-size:14px;margin:-6px 0 18px">
+      <span class="ko">남기신 메시지는 공개되지 않고 김숙향에게만 비공개로 전달됩니다.</span>
+      <span class="en">Your message stays private and is delivered only to Kim Sook Hyang.</span>
+    </p>
+    <form id="contact-form" class="cform" action="https://formspree.io/f/xzdqdyby" method="POST">
+      <input type="hidden" name="_subject" value="사이트 쪽지 · Website note">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="cform-row">
+        <label class="cform-field">
+          <span class="clabel"><span class="ko">이름</span><span class="en">Name</span></span>
+          <input type="text" name="name" required>
+        </label>
+        <label class="cform-field">
+          <span class="clabel"><span class="ko">답장받을 이메일</span><span class="en">Your email</span></span>
+          <input type="email" name="email" required>
+        </label>
+      </div>
+      <label class="cform-field">
+        <span class="clabel"><span class="ko">메시지</span><span class="en">Message</span></span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <div class="cform-foot">
+        <span class="cform-note"><span class="ko">비공개 · 사이트에 표시되지 않음</span><span class="en">Private · never shown on the site</span></span>
+        <button type="submit" class="cform-btn"><span class="ko">보내기</span><span class="en">Send</span></button>
+      </div>
+      <p id="cform-status" class="cform-status" hidden></p>
+    </form>
   </section>
 </main>
 
@@ -280,10 +327,10 @@ const translations = [
 ];
 // [제목ko, 제목en, "출판사·연도 ko", "...en", 링크]
 const authored = [
-  ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","A Sustainable Future (co-authored)","북코리 · 2025","Bookory · 2025","#"],
-  ["관광중국어 2 (공저)","Tourism Chinese 2 (co-authored)","백산 · 2020","Baeksan · 2020","#"],
-  ["관광중국어 1 (공저)","Tourism Chinese 1 (co-authored)","백산 · 2020","Baeksan · 2020","#"],
-  ["(NCS 기반) 호텔실무 중국어회화 (공저)","Hotel-Practice Chinese Conversation (co-authored)","백산출판사 · 2017","Baeksan · 2017","#"]
+  ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","A Sustainable Future (co-authored)","북코리 · 2025","Bookory · 2025","https://product.kyobobook.co.kr/detail/S000217447134"],
+  ["관광중국어 2 (공저)","Tourism Chinese 2 (co-authored)","백산 · 2020","Baeksan · 2020","https://product.kyobobook.co.kr/detail/S000001839022"],
+  ["관광중국어 1 (공저)","Tourism Chinese 1 (co-authored)","백산 · 2020","Baeksan · 2020","https://product.kyobobook.co.kr/detail/S000001839021"],
+  ["(NCS 기반) 호텔실무 중국어회화 (공저)","Hotel-Practice Chinese Conversation (co-authored)","백산출판사 · 2017","Baeksan · 2017","https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=155353281"]
 ];
 /* ===== 데이터 끝 ===== */
 
@@ -344,9 +391,52 @@ function setLang(l){
   document.getElementById('btn-ko').classList.toggle('active',l==='ko');
   document.getElementById('btn-en').classList.toggle('active',l==='en');
   render();
+  applyContactLang(l);
+}
+function applyContactLang(l){
+  const f = document.getElementById('contact-form');
+  if(!f) return;
+  const ph = {
+    name:{ko:'성함 또는 소속',en:'Your name or affiliation'},
+    email:{ko:'you@example.com',en:'you@example.com'},
+    message:{ko:'전하고 싶은 내용을 자유롭게 적어 주세요.',en:'Write your message here.'}
+  };
+  for(const k in ph){ const el=f.querySelector('[name='+k+']'); if(el) el.placeholder=ph[k][l]; }
 }
 document.getElementById('yr').textContent=new Date().getFullYear();
 render();
+applyContactLang('ko');
+
+(function(){
+  const cform = document.getElementById('contact-form');
+  if(!cform) return;
+  const cstatus = document.getElementById('cform-status');
+  const msg = {
+    ok:{ko:'메시지가 전달되었습니다. 감사합니다!',en:'Thank you — your note has been sent.'},
+    err:{ko:'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.',en:'Something went wrong. Please try again.'}
+  };
+  function show(type){
+    const l = document.body.classList.contains('lang-en') ? 'en' : 'ko';
+    cstatus.hidden = false;
+    cstatus.textContent = msg[type][l];
+    cstatus.style.color = (type==='ok') ? 'var(--accent-deep)' : '#C0392B';
+  }
+  cform.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = cform.querySelector('.cform-btn');
+    btn.disabled = true;
+    try{
+      const res = await fetch(cform.action,{
+        method:'POST',
+        body:new FormData(cform),
+        headers:{'Accept':'application/json'}
+      });
+      if(res.ok){ cform.reset(); show('ok'); }
+      else { show('err'); }
+    }catch(_){ show('err'); }
+    finally{ btn.disabled = false; }
+  });
+})();
 </script>
 </body>
 </html>
