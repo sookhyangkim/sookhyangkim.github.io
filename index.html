@@ -10,14 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#ffffff;
-    --card:#FAFAFA;
-    --ink:#1a1a1a;
-    --ink-soft:#3a3a3a;
-    --muted:#767676;
-    --line:#E6E4E0;
-    --accent:#FC2D8E;
-    --accent-deep:#C71585;
+    --paper:#ffffff; --card:#FAFAFA; --ink:#1a1a1a; --ink-soft:#3a3a3a;
+    --muted:#767676; --line:#E6E4E0; --accent:#FC2D8E; --accent-deep:#C71585;
     --maxw:880px;
     --display:'IBM Plex Sans KR','Noto Sans KR',system-ui,-apple-system,sans-serif;
     --serif:'Noto Serif KR','Nanum Myeongjo',serif;
@@ -25,17 +19,10 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    margin:0;background:var(--paper);color:var(--ink);
-    font-family:var(--body);line-height:1.7;font-size:16.5px;
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
   .lang-ko .en,.lang-en .ko{display:none !important;}
-
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);
-    backdrop-filter:saturate(120%) blur(8px);-webkit-backdrop-filter:saturate(120%) blur(8px);
-    border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(120%) blur(8px);-webkit-backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line);}
   .bar{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
   .brand{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;text-decoration:none;color:var(--ink);white-space:nowrap;}
   nav.links{display:flex;gap:18px;flex-wrap:wrap;}
@@ -45,109 +32,81 @@
   .lang{display:flex;align-items:center;gap:7px;font-family:var(--display);font-size:13px;letter-spacing:.06em;}
   .lang button{background:none;border:none;cursor:pointer;padding:0;font:inherit;color:var(--muted);transition:color .25s;}
   .lang button.active{color:var(--ink);}.lang .sep{color:var(--line);}
-
   .profile{display:flex;gap:34px;align-items:flex-start;padding:60px 0 46px;}
   .portrait{flex:0 0 168px;}
-  .portrait .ph-img{width:168px;height:204px;border-radius:14px;border:1px solid var(--line);
-    background:linear-gradient(160deg,#F2F2F2,#E9E9E9);display:flex;align-items:center;justify-content:center;
-    color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;}
+  .portrait .ph-img{width:168px;height:204px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(160deg,#F2F2F2,#E9E9E9);display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;}
   .pinfo{flex:1;min-width:0;}
   .pinfo h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
   .pinfo .hanja{font-family:var(--serif);font-weight:500;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
   .pinfo .role{font-family:var(--display);font-weight:700;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
   .pinfo .affil{color:var(--muted);font-size:15px;margin:0 0 18px;}
-
   .iconrow{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
-  .iconrow a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);
-    display:flex;align-items:center;justify-content:center;color:var(--ink-soft);text-decoration:none;
-    transition:all .3s ease;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.02em;}
+  .iconrow a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);text-decoration:none;transition:all .3s ease;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.02em;}
   .iconrow a:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px);}
   .iconrow a svg{width:18px;height:18px;display:block;}
   .bio p{margin:0 0 12px;color:var(--ink-soft);font-size:16px;}
-
   section{padding:42px 0;border-top:1px solid var(--line);}
   .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;}
   .sec-head .num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.04em;}
   .sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
-
   .rows{display:flex;flex-direction:column;}
   .row{display:flex;gap:20px;padding:13px 0;border-top:1px solid var(--line);}
   .row:first-child{border-top:none;}
   .row .when{flex:0 0 150px;font-family:var(--display);font-weight:700;color:var(--muted);font-size:14px;line-height:1.5;}
   .row .what{flex:1;}.row .what b{font-weight:700;}
   .row .what span{display:block;color:var(--muted);font-size:14px;margin-top:1px;}
-
   ul.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;}
   ul.tags li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-size:14.5px;color:var(--ink-soft);}
-
-  /* ===== 학술 논문 목록 (날짜 / 「제목」, 『게재지』 · 줄 전체 링크) ===== */
   ul.paperlist{list-style:none;padding:0;margin:0;}
   ul.paperlist li{position:relative;padding:11px 0 11px 22px;border-top:1px solid var(--line);}
   ul.paperlist li:first-child{border-top:none;}
   ul.paperlist li::before{content:"";position:absolute;left:2px;top:18px;width:6px;height:6px;background:var(--accent);}
   .pd-link{display:block;text-decoration:none;color:var(--ink);font-size:16px;line-height:1.6;transition:color .2s;}
-  a.pd-link:hover{color:var(--accent-deep);}
+  a.pd-link{color:var(--accent-deep);}
   a.pd-link:hover .pd-main{text-decoration:underline;text-underline-offset:3px;}
   .pd-date{font-family:var(--display);font-weight:700;color:var(--accent-deep);white-space:nowrap;}
   .pd-sep{color:var(--line);margin:0 8px;}
   .pd-venue{color:var(--muted);}
-  .pd-role{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;
-    color:var(--accent-deep);border:1px solid var(--line);border-radius:6px;padding:0 6px;margin:0 4px;vertical-align:1px;}
+  .pd-role{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;color:var(--accent-deep);border:1px solid var(--line);border-radius:6px;padding:0 6px;margin:0 4px;vertical-align:1px;}
   .pd-off{color:var(--ink);cursor:default;}
   .pd-off .pd-date{color:var(--muted);}
-
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;}
   .bookcard{display:flex;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px;transition:transform .25s,box-shadow .25s;}
   .bookcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px -16px rgba(28,25,21,.4);}
-  .bookcard .cover{flex:0 0 76px;height:108px;border-radius:8px;border:1px dashed var(--accent);
-    background:#F2F2F2;display:flex;align-items:center;justify-content:center;text-align:center;
-    color:var(--accent-deep);font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;
-    text-decoration:none;transition:filter .25s;}
+  .bookcard .cover{flex:0 0 76px;height:108px;border-radius:8px;border:1px dashed var(--accent);background:#F2F2F2;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--accent-deep);font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;text-decoration:none;transition:filter .25s;}
   a.cover:hover{filter:brightness(.92);}
   .bookcard .cover img{width:100%;height:100%;object-fit:cover;}
   .bookcard .meta{flex:1;min-width:0;display:flex;flex-direction:column;}
   .bookcard .meta .bt{font-weight:700;font-size:15px;line-height:1.35;color:var(--ink);}
   .bookcard .meta .bsub{color:var(--muted);font-size:13px;margin-top:3px;flex:1;}
-  .buy{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;margin-top:10px;
-    width:34px;height:34px;border-radius:50%;
-    color:var(--accent-deep);text-decoration:none;
-    background:#FCE7F1;border:1px solid #F6C9DE;
-    transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s ease;}
+  .buy{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;margin-top:10px;width:34px;height:34px;border-radius:50%;color:var(--accent-deep);text-decoration:none;background:#FCE7F1;border:1px solid #F6C9DE;transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s ease;}
   .buy svg{width:17px;height:17px;flex:0 0 auto;}
-  a.buy:hover{background:var(--accent);border-color:var(--accent);color:#fff;
-    transform:translateY(-2px) scale(1.06);box-shadow:0 6px 14px -6px rgba(252,45,142,.7);}
+  a.buy:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px) scale(1.06);box-shadow:0 6px 14px -6px rgba(252,45,142,.7);}
   .buy.off{color:#D9A7BE;background:#FAF1F5;border-style:dashed;border-color:#EED3DF;cursor:default;}
-
   ul.simple{list-style:none;padding:0;margin:0;}
   ul.simple li{padding:11px 0;border-top:1px solid var(--line);font-size:15.5px;}
   ul.simple li:first-child{border-top:none;}
   ul.simple li span{color:var(--muted);font-size:13.5px;}
-  a.bk-link{color:inherit;text-decoration:none;transition:color .2s;}
-  a.bk-link:hover{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px;}
-
+  a.bk-link{color:var(--accent-deep);text-decoration:none;transition:color .2s;}
+  a.bk-link:hover{text-decoration:underline;text-underline-offset:3px;}
   footer{border-top:1px solid var(--line);padding:40px 0 64px;color:var(--muted);}
   footer .fl{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
   footer a{color:var(--ink-soft);text-decoration:none;font-size:14px;border-bottom:1px solid transparent;transition:.3s;}
   footer a:hover{color:var(--accent-deep);border-color:var(--accent);}
   footer .cr{font-size:12.5px;letter-spacing:.04em;}
   .ph{color:var(--accent-deep);}
-
   .reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;}
   .d1{animation-delay:.05s}.d2{animation-delay:.18s}
   @keyframes rise{to{opacity:1;transform:none;}}
   @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none;}html{scroll-behavior:auto;}}
-  @media (max-width:640px){
-    nav.links{display:none;}
-    .profile{flex-direction:column;gap:22px;}
-    .portrait{flex:0 0 auto;}.portrait .ph-img{width:140px;height:170px;}
-  }
+  @media (max-width:640px){nav.links{display:none;}.profile{flex-direction:column;gap:22px;}.portrait{flex:0 0 auto;}.portrait .ph-img{width:140px;height:170px;}}
 </style>
 </head>
 <body class="lang-ko">
 
 <header>
   <div class="bar">
-    <a class="brand" href="#top">KIM SOOK HYANG <span style="color:var(--muted);font-weight:400"></a>
+    <a class="brand" href="#top">KIM SOOK HYANG</a>
     <nav class="links">
       <a href="#about"><span class="ko">소개</span><span class="en">About</span></a>
       <a href="#research"><span class="ko">연구</span><span class="en">Research</span></a>
@@ -162,7 +121,6 @@
 </header>
 
 <main class="wrap" id="top">
-
   <div class="profile">
     <div class="portrait reveal d1">
       <div class="ph-img"><img src="1.png" alt="김숙향" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div>
@@ -209,7 +167,6 @@
       <span class="en">Click a cover or icon to open its Kyobo page.</span>
     </p>
     <div class="grid" id="translations"></div>
-
     <div class="sec-head" style="margin-top:40px"><span class="num">06</span><h2><span class="ko">저서</span><span class="en">Authored Books</span></h2></div>
     <ul class="simple" id="authored"></ul>
   </section>
@@ -217,10 +174,9 @@
   <section id="teaching">
     <div class="sec-head"><span class="num">07</span><h2><span class="ko">강의</span><span class="en">Teaching</span></h2></div>
     <ul class="simple">
-      <li><b>중국 인문 텍스트와 디지털 큐레이션</b> <span class="ko">· 고전 텍스트를 디지털 방법으로 큐레이팅하는 융복합 강의</span><span class="en">· Chinese Humanities Texts &amp; Digital Curation</span></li>
+      <li><b><span class="ko">중국 인문 텍스트와 디지털 큐레이션</span><span class="en">Chinese Humanities Texts &amp; Digital Curation</span></b> <span class="ko">· 고전 텍스트를 디지털 방법으로 큐레이팅하는 융복합 강의</span><span class="en">· An interdisciplinary course on curating classical texts with digital methods</span></li>
     </ul>
   </section>
-
 </main>
 
 <footer>
@@ -236,79 +192,98 @@
 </footer>
 
 <script>
-/* ===== 데이터: 여기만 고치면 사이트가 업데이트됩니다 ===== */
+/* ===== 데이터 ===== */
 const interests = {
   ko:["명청 소화(笑話) 문헌","풍몽룡·장대·김성탄의 편집·비평","雅/俗 문화 위계와 장르 이론","디지털인문학 · 코퍼스 구축","AI 활용 문학 연구","콘텐츠 기획 및 제작"],
   en:["Ming–Qing xiaohua","Feng Menglong · Zhang Dai · Jin Shengtan","Ya/su hierarchy & genre theory","Digital Humanities · corpus building","AI-assisted literary research","Content curation & production"]
 };
-const education = [
-  ["2012.06","<b>박사</b> 復旦大學(중국) 中國古代文學","학위논문 「金聖嘆古文批評研究」 · 지도교수 黃霖"],
-  ["2009.03","<b>박사 수료</b> 고려대학교 중어중문학과",""],
-  ["2005.06","<b>석사</b> 고려대학교 중어중문학과","張岱『陶庵夢憶』연구 · 지도교수 이재훈"],
-  ["2002.02","<b>학사</b> 순천향대학교 중어중문과",""]
-];
-const career = [
-  ["2023.07 – 현재","<b>연구교수</b> 고려대학교 중국학연구소",""],
-  ["2022.11 – 2023.06","<b>전임연구원</b> 가톨릭대학교",""],
-  ["2019.09 – 2023.02","<b>강사</b> 가천대학교",""],
-  ["2018.03 – 2019.02","<b>연구교수</b> 고려대학교 중국학연구소",""],
-  ["2016.09 – 2017.08","<b>초빙교수</b> 숭실대학교",""],
-  ["2013.03 – 2023.02","<b>강사</b> 고려대학교",""],
-  ["2012.09 – 2013.06","<b>강사</b> 순천향대학교",""]
-];
-// [제목, 게재지 권·면, "연.월.", 단독/공동, KCI/DOI 링크("#"=비움)]
+const education = {
+  ko:[
+    ["2012.06","<b>박사</b> 復旦大學(중국) 中國古代文學","학위논문 「金聖嘆古文批評研究」 · 지도교수 黃霖"],
+    ["2009.03","<b>박사 수료</b> 고려대학교 중어중문학과",""],
+    ["2005.06","<b>석사</b> 고려대학교 중어중문학과","張岱『陶庵夢憶』연구 · 지도교수 이재훈"],
+    ["2002.02","<b>학사</b> 순천향대학교 중어중문과",""]
+  ],
+  en:[
+    ["2012.06","<b>Ph.D.</b> Classical Chinese Literature, Fudan University, China","Dissertation: A Study of Jin Shengtan's Classical Prose Criticism · Adviser: Huang Lin"],
+    ["2009.03","<b>Ph.D. Coursework</b> Chinese Language & Literature, Korea University",""],
+    ["2005.06","<b>M.A.</b> Chinese Language & Literature, Korea University","Thesis on Zhang Dai's Tao'an Mengyi · Adviser: Lee Jae-hoon"],
+    ["2002.02","<b>B.A.</b> Chinese Language & Literature, Soonchunhyang University",""]
+  ]
+};
+const career = {
+  ko:[
+    ["2023.07 – 현재","<b>연구교수</b> 고려대학교 중국학연구소",""],
+    ["2022.11 – 2023.06","<b>전임연구원</b> 가톨릭대학교",""],
+    ["2019.09 – 2023.02","<b>강사</b> 가천대학교",""],
+    ["2018.03 – 2019.02","<b>연구교수</b> 고려대학교 중국학연구소",""],
+    ["2016.09 – 2017.08","<b>초빙교수</b> 숭실대학교",""],
+    ["2013.03 – 2023.02","<b>강사</b> 고려대학교",""],
+    ["2012.09 – 2013.06","<b>강사</b> 순천향대학교",""]
+  ],
+  en:[
+    ["2023.07 – Present","<b>Research Professor</b> Center for Chinese Studies, Korea University",""],
+    ["2022.11 – 2023.06","<b>Full-time Researcher</b> Catholic University of Korea",""],
+    ["2019.09 – 2023.02","<b>Lecturer</b> Gachon University",""],
+    ["2018.03 – 2019.02","<b>Research Professor</b> Center for Chinese Studies, Korea University",""],
+    ["2016.09 – 2017.08","<b>Visiting Professor</b> Soongsil University",""],
+    ["2013.03 – 2023.02","<b>Lecturer</b> Korea University",""],
+    ["2012.09 – 2013.06","<b>Lecturer</b> Soonchunhyang University",""]
+  ]
+};
+// [제목ko, 제목en, 게재지ko, 게재지en, "권면", "연.월.", 역할, 링크("#"=비움)]
 const papers = [
-  ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","열린정신 인문학 연구 27(1), 69–96","2026.04.","공동","#"],
-  ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","인간연구 58, 179–211","2026.04.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003331376"],
-  ["淸末 文獻笑話 탐색 ─ ≪笑笑錄≫의 문헌적 가치와 소화 전승 양상","중국학논총 91, 87–116","2026.03.","단독","https://doi.org/10.26585/chlab.2026..91.004"],
-  ["디지털 시대 인성교육을 위한 明淸 笑話의 활용","沽山中國學報 15, 203–235","2026.03.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003324381"],
-  ["팟캐스트를 활용한 明淸笑話의 인성교육 콘텐츠 제작 연구","중국문화연구 72, 21–42","2026.05.","단독","https://doi.org/10.18212/cccs.2026..72.002"],
-  ["明末 文獻笑話 탐색 ― 李贄 ≪山中一夕話≫ 笑話에 반영된 文人 趣向","중국학논총 88, 31–61","2025.06.","단독","https://doi.org/10.26585/chlab.2025..88.002"],
-  ["明末 文獻笑話 탐색: 張岱 『快園道古』 속 소화적 성격 고찰","중어중문학 100, 35–66","2025.06.","단독","https://doi.org/10.46612/kjcll.2025.06.100.35"],
-  ["경계의 해체와 재구성: 장대(張岱)의 『서호몽심(西湖夢尋)』에 나타난 복합적 문학 구조와 그 의미","순천향 인문과학논총 43(4), 35–60","2024.12.","단독","https://doi.org/10.35222/IHSU.2024.43.4.35"],
-  ["생성형 AI 챗봇을 활용한 문학연구의 가능성과 한계 ― ChatGPT-4.o 기반 장대 챗봇 '대화(岱話)'","중국학논총 85, 289–322","2024.09.","단독","https://doi.org/10.26585/chlab.2024..85.010"],
-  ["메타버스 기반 대학 비교과 학습환경의 특성 연구 : C대학 'CUK 북 챌린지'","한국게임학회 논문지 23(4), 81–92","2023.08.","공동","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002988694"],
-  ["明末 民間笑話書 ≪笑府≫ 속 지식인 연구Ⅰ ― 〈腐流〉편","중국학논총 80, 61–85","2023.06.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002973776"],
-  ["메타버스로 체험하는 문학 ― 중국 고전산문 수업 설계","순천향 인문과학논총 42(1), 121–145","2023.03.","단독","https://scholar.kyobobook.co.kr/article/detail/4010041412852"],
-  ["메타버스 플랫폼 젭(ZEP)을 활용한 모둠 활동 수업 방안 연구","중국어문논총 111, 421–446","2022.10.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002890889"],
-  ["明淸 笑話 중 文獻笑話의 의미 재탐색 ― ≪明淸笑話十種≫","중국학논총 77, 77–105","2022.09.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002881875"],
-  ["明末 文獻笑話의 웹툰 콘텐츠 제작 연구 ― 馮夢龍 ≪古今譚槪≫〈問牛〉","중국소설논총 67, 107–126","2022.08.","단독","https://doi.org/10.17004/jrcn.2022..67.005"],
-  ["中國 儒家 經典 속 '웃음'의 의미 ― 笑話라는 장르의 이해","중국학논총 76, 123–151","2022.06.","단독","https://doi.org/10.26585/chlab.2022..76.006"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (6)","중국어문논총 107, 355–381","2021.10.","공동","https://doi.org/10.26586/chls.2021..107.014"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (5)","중국학논총 72, 279–304","2021.06.","공동","https://doi.org/10.26585/chlab.2021..72.012"],
-  ["≪古今譚槪≫〈迂腐〉의 飜譯과 註解 (2)","중국어문논총 103, 279–304","2021.02.","단독","https://doi.org/10.26586/chls.2021..103.010"],
-  ["明末 서양 과학서 번역 활동의 의의 ― 徐光啓(1562–1633)","중국학논총 70, 135–161","2020.12.","단독","#"],
-  ["馮夢龍의 ≪古今譚槪≫ 一考","중국어문논총 101, 127–152","2020.10.","단독","#"],
-  ["≪古今譚槪≫〈迂腐部〉의 飜譯과 註解","중국학논총 69, 337–359","2020.09.","단독","#"],
-  ["淸初 批評家 孫琮의 評語 分析 ― ≪山曉閣選唐大家柳柳州全集≫","중국어문논총 98, 91–116","2020.04.","단독","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (4)","중국어문논총 95, 381–407","2019.10.","공동(제1)","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (3)","중국학논총 64, 299–324","2019.06.","공동","#"],
-  ["표절과 활용의 경계 ― ≪古文觀止≫에 반영된 前代 選文批評의 의의","중국어문논총 92, 115–143","2019.04.","단독","https://doi.org/10.26586/chls.2019..92.005"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (2)","중국어문논역총간 44, 403–431","2019.01.","공동","https://doi.org/10.35822/JCLLT.2019.01.44.403"],
-  ["≪西湖夢尋≫의 註釋과 飜譯 (2) ― 卷2","중국학논총 60, 203–230","2018.06.","단독","https://doi.org/10.26585/chlab.2018..60.010"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (1)","중국어문논총 87, 263–286","2018.06.","공동","#"],
-  ["≪西湖夢尋≫의 註釋과 飜譯 (1)","중국학논총 58, 467–492","2017.12.","단독","#"],
-  ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","중국학논총 40, 109–132","2013.12.","단독","#"]
+  ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","Translation and Annotation of “Tanxian 1” in Chibeioutan, Juan 2 (1)","열린정신 인문학 연구","Wonkwang Journal of Humanities","27(1), 69–96","2026.04.","공동","#"],
+  ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","Coexistence of Heterogeneity and System: Style and Editorial Structure in the Second Collection of Shanzhong Yixihua","인간연구","Journal of Human Studies","58, 179–211","2026.04.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003331376"],
+  ["淸末 文獻笑話 탐색 ─ ≪笑笑錄≫의 문헌적 가치와 소화 전승 양상","An Exploration of Late Qing Literary Xiaohua: The Bibliographical Value and Transmission Patterns of Xiaoxiaolu","중국학논총","Journal of Chinese Studies","91, 87–116","2026.03.","단독","https://doi.org/10.26585/chlab.2026..91.004"],
+  ["디지털 시대 인성교육을 위한 明淸 笑話의 활용","The Use of Ming-Qing Xiaohua for Character Education in the Digital Age","沽山中國學報","Gusan Journal of Chinese Studies","15, 203–235","2026.03.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003324381"],
+  ["팟캐스트를 활용한 明淸笑話의 인성교육 콘텐츠 제작 연구","A Study on the Development of Podcast-Based Character Education Content Utilizing Ming-Qing Xiaohua","중국문화연구","The Journal of Chinese Cultural Studies","72, 21–42","2026.05.","단독","https://doi.org/10.18212/cccs.2026..72.002"],
+  ["明末 文獻笑話 탐색 ― 李贄 ≪山中一夕話≫ 笑話에 반영된 文人 趣向","An Exploration of Wenxian Xiaohua in the Late Ming: The Literati’s Aesthetic Preferences in Li Zhi’s Shanzhong Yixihua","중국학논총","Journal of Chinese Studies","88, 31–61","2025.06.","단독","https://doi.org/10.26585/chlab.2025..88.002"],
+  ["明末 文獻笑話 탐색: 張岱 『快園道古』 속 소화적 성격 고찰","An Exploration of Wenxian Xiaohua in the Late Ming: The Xiaohua Characteristics of Zhang Dai’s Kuaiyuan Daogu","중어중문학","Korea Journal of Chinese Language and Literature","100, 35–66","2025.06.","단독","https://doi.org/10.46612/kjcll.2025.06.100.35"],
+  ["경계의 해체와 재구성: 장대(張岱)의 『서호몽심(西湖夢尋)』에 나타난 복합적 문학 구조와 그 의미","The Dissolution and Reconstruction of Boundaries: The Complex Literary Structure in Zhang Dai’s Xihu Mengxun","순천향 인문과학논총","Soonchunhyang Journal of Humanities","43(4), 35–60","2024.12.","단독","https://doi.org/10.35222/IHSU.2024.43.4.35"],
+  ["생성형 AI 챗봇을 활용한 문학연구의 가능성과 한계 ― ChatGPT-4.o 기반 장대 챗봇 '대화(岱話)'","Possibilities and Limitations of Literary Research Using Generative AI Chatbots: ‘Daihua’, a Zhang Dai Chatbot Based on ChatGPT-4.o","중국학논총","Journal of Chinese Studies","85, 289–322","2024.09.","단독","https://doi.org/10.26585/chlab.2024..85.010"],
+  ["메타버스 기반 대학 비교과 학습환경의 특성 연구 : C대학 'CUK 북 챌린지'","Characteristics of a Metaverse-Based Extracurricular Learning Environment: C University’s ‘CUK Book Challenge’","한국게임학회 논문지","Journal of Korea Game Society","23(4), 81–92","2023.08.","공동","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002988694"],
+  ["明末 民間笑話書 ≪笑府≫ 속 지식인 연구Ⅰ ― 〈腐流〉편","A Study on Intellectuals in the Late Ming Xiaohua Book Xiaofu I: The 〈Fuliu〉 Chapter","중국학논총","Journal of Chinese Studies","80, 61–85","2023.06.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002973776"],
+  ["메타버스로 체험하는 문학 ― 중국 고전산문 수업 설계","Experiencing Literature in the Metaverse: Designing a Chinese Classical Prose Class","순천향 인문과학논총","Soonchunhyang Journal of Humanities","42(1), 121–145","2023.03.","단독","https://scholar.kyobobook.co.kr/article/detail/4010041412852"],
+  ["메타버스 플랫폼 젭(ZEP)을 활용한 모둠 활동 수업 방안 연구","A Study on Group Activity Classes Using the Metaverse Platform ZEP","중국어문논총","Journal of Chinese Language and Literature","111, 421–446","2022.10.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002890889"],
+  ["明淸 笑話 중 文獻笑話의 의미 재탐색 ― ≪明淸笑話十種≫","Redefining the Meaning of Wenxian Xiaohua in Ming-Qing Xiaohua: Focused on Mingqing Xiaohua Shizhong","중국학논총","Journal of Chinese Studies","77, 77–105","2022.09.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002881875"],
+  ["明末 文獻笑話의 웹툰 콘텐츠 제작 연구 ― 馮夢龍 ≪古今譚槪≫〈問牛〉","Research on Webtoon Content Creation of Wenxian Xiaohua in the Late Ming: Feng Menglong’s Gujin Tangai","중국소설논총","The Journal of the Research of Chinese Novels","67, 107–126","2022.08.","단독","https://doi.org/10.17004/jrcn.2022..67.005"],
+  ["中國 儒家 經典 속 '웃음'의 의미 ― 笑話라는 장르의 이해","The Meaning of ‘Laughter’ in Chinese Confucian Classics: Understanding the Genre of Xiaohua","중국학논총","Journal of Chinese Studies","76, 123–151","2022.06.","단독","https://doi.org/10.26585/chlab.2022..76.006"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (6)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (6)","중국어문논총","Journal of Chinese Language and Literature","107, 355–381","2021.10.","공동","https://doi.org/10.26586/chls.2021..107.014"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (5)","A Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (5)","중국학논총","Journal of Chinese Studies","72, 279–304","2021.06.","공동","https://doi.org/10.26585/chlab.2021..72.012"],
+  ["≪古今譚槪≫〈迂腐〉의 飜譯과 註解 (2)","An Annotated Translation of Gujin Tangai·Yufu (2)","중국어문논총","Journal of Chinese Language and Literature","103, 279–304","2021.02.","단독","https://doi.org/10.26586/chls.2021..103.010"],
+  ["明末 서양 과학서 번역 활동의 의의 ― 徐光啓(1562–1633)","The Significance of Western Science Book Translation in the Late Ming: Focus on Xu Guangqi","중국학논총","Journal of Chinese Studies","70, 135–161","2020.12.","단독","#"],
+  ["馮夢龍의 ≪古今譚槪≫ 一考","A Study on Feng Menglong’s Gujin Tangai","중국어문논총","Journal of Chinese Language and Literature","101, 127–152","2020.10.","단독","#"],
+  ["≪古今譚槪≫〈迂腐部〉의 飜譯과 註解","An Annotated Translation of Gujin Tangai·Yufu","중국학논총","Journal of Chinese Studies","69, 337–359","2020.09.","단독","#"],
+  ["淸初 批評家 孫琮의 評語 分析 ― ≪山曉閣選唐大家柳柳州全集≫","An Analysis of Sun Cong’s Comments in the Early Qing: Shanxiaoge Xuan Tang Dajia Liu Liuzhou Quanji","중국어문논총","Journal of Chinese Language and Literature","98, 91–116","2020.04.","단독","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (4)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (4)","중국어문논총","Journal of Chinese Language and Literature","95, 381–407","2019.10.","공동(제1)","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (3)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (3)","중국학논총","Journal of Chinese Studies","64, 299–324","2019.06.","공동","#"],
+  ["표절과 활용의 경계 ― ≪古文觀止≫에 반영된 前代 選文批評의 의의","Boundaries of Plagiarism and Utilization: The Significance of Former Selected-Works Criticism in Guwen Guanzhi","중국어문논총","Journal of Chinese Language and Literature","92, 115–143","2019.04.","단독","https://doi.org/10.26586/chls.2019..92.005"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (2)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (2)","중국어문논역총간","Journal of Chinese Language and Literature Translation","44, 403–431","2019.01.","공동","https://doi.org/10.35822/JCLLT.2019.01.44.403"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (2) ― 卷2","Translations and Annotations of Xihu Mengxun (2): Part 2","중국학논총","Journal of Chinese Studies","60, 203–230","2018.06.","단독","https://doi.org/10.26585/chlab.2018..60.010"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (1)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (1)","중국어문논총","Journal of Chinese Language and Literature","87, 263–286","2018.06.","공동","#"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (1)","Translations and Annotations of Xihu Mengxun (1)","중국학논총","Journal of Chinese Studies","58, 467–492","2017.12.","단독","#"],
+  ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","Jin Shengtan’s Text Processing in the Anthology of Classical Chinese Essays","중국학논총","The Journal of Sinology","40, 109–132","2013.12.","단독","#"],
 ];
-// [제목, "원저자 · 출판사", 연도, 역할(""=없음), 표지이미지(파일명 또는 URL, ""=비움), 교보링크("#"=비움)]
+// [제목ko, 제목en, "원저자·출판사 ko", "...en", 연도, 역할ko, 역할en, 표지, 링크]
 const translations = [
-  ["서호몽심 (西湖夢尋)","역락",2024,"","b1.jpg","https://product.kyobobook.co.kr/detail/S000214815468"],
-  ["池北偶談: 談故 1","王士禛 · 퍼플",2024,"공역","","https://product.kyobobook.co.kr/detail/S000212607621"],
-  ["도암몽억 (陶庵夢憶)","張岱 · 세창출판사",2020,"","b2.jpg","https://product.kyobobook.co.kr/detail/S000001303469"],
-  ["자수","류옹 · 한국학술정보",2016,"","xiu.jpg","https://product.kyobobook.co.kr/detail/S000000509587"],
-  ["난징함락과 대학살 1–4","저우얼푸 · 한국학술정보",2015,"","nan.jpg","https://product.kyobobook.co.kr/detail/S000000509538"],
-  ["중국의 전통장신구 上·下","탕쉬샹·왕진화 · 한국학술정보",2015,"","jiang.jpg","https://product.kyobobook.co.kr/detail/S000000509554"],
-  ["(똑똑한 리더의) 맹자지혜","천신후이 · 북메이드",2011,"","meng.jpg","https://product.kyobobook.co.kr/detail/S000001597137"],
-  ["제왕","우한 · 살림출판사",2010,"","wang.jpg","https://product.kyobobook.co.kr/detail/S000000721230"],
-  ["대여행가","우한 · 살림출판사",2009,"","lvxing.jpg","https://product.kyobobook.co.kr/detail/S000000721031"],
-  ["명장","우한 · 살림출판사",2008,"","ming.jpg","https://product.kyobobook.co.kr/detail/S000000720957"]
+  ["서호몽심 (西湖夢尋)","Xihu Mengxun","역락","Yeokrak",2024,"","","b1.jpg","https://product.kyobobook.co.kr/detail/S000214815468"],
+  ["池北偶談: 談故 1","Chibeioutan: Tangu 1","王士禛 · 퍼플","Wang Shizhen · Purple",2024,"공역","Co-trans.","","#"],
+  ["도암몽억 (陶庵夢憶)","Tao'an Mengyi","張岱 · 세창출판사","Zhang Dai · Sechang",2020,"","","b2.jpg","https://product.kyobobook.co.kr/detail/S000001303469"],
+  ["자수 (刺繡)","Embroidery","류옹 · 한국학술정보","Liu Weng · KSI",2016,"","","xiu.jpg","https://product.kyobobook.co.kr/detail/S000000509587"],
+  ["난징함락과 대학살 1–4","The Fall of Nanjing 1–4","저우얼푸 · 한국학술정보","Zhou Erfu · KSI",2015,"","","nan.jpg","https://product.kyobobook.co.kr/detail/S000000509538"],
+  ["중국의 전통장신구 上·下","Traditional Chinese Ornaments I·II","탕쉬샹·왕진화 · 한국학술정보","Tang Xuxiang · Wang Jinhua · KSI",2015,"","","jiang.jpg","https://product.kyobobook.co.kr/detail/S000000509554"],
+  ["(똑똑한 리더의) 맹자지혜","Mencius' Wisdom","천신후이 · 북메이드","Chen Xinhui · Bookmade",2011,"","","meng.jpg","https://product.kyobobook.co.kr/detail/S000001597137"],
+  ["제왕 (帝王)","The Emperor","우한 · 살림출판사","Wu Han · Sallim",2010,"","","wang.jpg","https://product.kyobobook.co.kr/detail/S000000721230"],
+  ["대여행가 (大旅行家)","The Great Traveler","우한 · 살림출판사","Wu Han · Sallim",2009,"","","lvxing.jpg","https://product.kyobobook.co.kr/detail/S000000721031"],
+  ["명장 (名將)","The Great General","우한 · 살림출판사","Wu Han · Sallim",2008,"","","ming.jpg","https://product.kyobobook.co.kr/detail/S000000720957"]
 ];
-// [제목, "출판사 · 연도", 링크("#"=비움)]
+// [제목ko, 제목en, "출판사·연도 ko", "...en", 링크]
 const authored = [
-  ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","북코리 · 2025","https://product.kyobobook.co.kr/detail/S000217447134"],
-  ["관광중국어 2 (공저)","백산 · 2020","https://product.kyobobook.co.kr/detail/S000001839022"],
-  ["관광중국어 1 (공저)","백산 · 2020","https://product.kyobobook.co.kr/detail/S000001839021"],
-  ["(NCS 기반) 호텔실무 중국어회화 (공저)","백산출판사 · 2017","https://product.kyobobook.co.kr/detail/S000001757696"]
+  ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","A Sustainable Future (co-authored)","북코리 · 2025","Bookory · 2025","#"],
+  ["관광중국어 2 (공저)","Tourism Chinese 2 (co-authored)","백산 · 2020","Baeksan · 2020","#"],
+  ["관광중국어 1 (공저)","Tourism Chinese 1 (co-authored)","백산 · 2020","Baeksan · 2020","#"],
+  ["(NCS 기반) 호텔실무 중국어회화 (공저)","Hotel-Practice Chinese Conversation (co-authored)","백산출판사 · 2017","Baeksan · 2017","#"]
 ];
 /* ===== 데이터 끝 ===== */
 
@@ -318,40 +293,44 @@ function render(){
   document.getElementById('interests').innerHTML = interests[lang].map(t=>`<li>${esc(t)}</li>`).join('');
   const rowsHtml = arr => arr.map(([w,what,sub])=>
     `<div class="row"><div class="when">${esc(w)}</div><div class="what">${what}${sub?`<span>${esc(sub)}</span>`:''}</div></div>`).join('');
-  document.getElementById('education').innerHTML = rowsHtml(education);
-  document.getElementById('career').innerHTML = rowsHtml(career);
+  document.getElementById('education').innerHTML = rowsHtml(education[lang]);
+  document.getElementById('career').innerHTML = rowsHtml(career[lang]);
 
-  const itemHtml = ([t,v,date,role,link])=>{
-    const venue = String(v).replace(/\s*\d.*$/,'').trim();
-    const detail = String(v).slice(venue.length).replace(/^[\s,]+/,'');
+  const itemHtml = ([ko,en,jko,jen,vol,date,role,link])=>{
+    const title = (lang==='en' && en) ? en : ko;
+    const venue = (lang==='en' && jen) ? jen : jko;
     const inner = `<span class="pd-date">${esc(date)}</span>`
                 + `<span class="pd-sep">/</span>`
-                + `<span class="pd-main">「${esc(t)}」<span class="pd-role">${esc(role)}</span>`
-                + `<span class="pd-venue">,『${esc(venue)}』${detail?` ${esc(detail)}`:''}</span></span>`;
+                + `<span class="pd-main">${lang==='en'?'':'「'}${esc(title)}${lang==='en'?'':'」'}<span class="pd-role">${esc(role)}</span>`
+                + `<span class="pd-venue">, ${lang==='en'?'':'『'}${esc(venue)}${lang==='en'?'':'』'} ${esc(vol)}</span></span>`;
     return (link && link!=='#')
       ? `<li><a class="pd-link" href="${link}" target="_blank" rel="noopener">${inner}</a></li>`
-      : `<li><span class="pd-link pd-off" title="링크 준비 중">${inner}</span></li>`;
+      : `<li><span class="pd-link pd-off">${inner}</span></li>`;
   };
   document.getElementById('papers').innerHTML =
-    `<ul class="paperlist">${papers.slice().sort((a,b)=>b[2].localeCompare(a[2])).map(itemHtml).join('')}</ul>`;
+    `<ul class="paperlist">${papers.slice().sort((a,b)=>b[5].localeCompare(a[5])).map(itemHtml).join('')}</ul>`;
 
-  document.getElementById('translations').innerHTML = translations.map(([t,sub,y,role,img,link])=>{
+  document.getElementById('translations').innerHTML = translations.map(([ko,en,subko,suben,y,roleko,roleen,img,link])=>{
+    const t = (lang==='en' && en) ? en : ko;
+    const sub = (lang==='en' && suben) ? suben : subko;
+    const role = (lang==='en') ? roleen : roleko;
     const href = (link && link!=='#') ? link : '#';
     const linked = href!=='#';
-    const cover = img ? `<img src="${img}" alt="${esc(t)} 표지">` : `<span>［표지］</span>`;
+    const cover = img ? `<img src="${img}" alt="${esc(t)}">` : `<span>${lang==='en'?'COVER':'［표지］'}</span>`;
     const meta = [sub, y, role].filter(x=>x!==undefined && x!==null && String(x).trim()!=='').map(esc).join(' · ');
     const coverTag = linked
-      ? `<a class="cover" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)} 교보문고에서 보기">${cover}</a>`
+      ? `<a class="cover" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)}">${cover}</a>`
       : `<span class="cover">${cover}</span>`;
+    const icon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5.2 8.4 4.7 6 4.8a1 1 0 0 0-1 1v10.4a1 1 0 0 0 1 1c2.3-.1 4.4.4 6 1.6 1.6-1.2 3.7-1.7 6-1.6a1 1 0 0 0 1-1V5.8a1 1 0 0 0-1-1c-2.4-.1-4.5.4-6 1.7Z"/><path d="M12 6.5V19"/></svg>`;
     const buyBtn = linked
-      ? `<a class="buy" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)} 구매 페이지로 이동"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5.2 8.4 4.7 6 4.8a1 1 0 0 0-1 1v10.4a1 1 0 0 0 1 1c2.3-.1 4.4.4 6 1.6 1.6-1.2 3.7-1.7 6-1.6a1 1 0 0 0 1-1V5.8a1 1 0 0 0-1-1c-2.4-.1-4.5.4-6 1.7Z"/><path d="M12 6.5V19"/></svg></a>`
-      : `<span class="buy off" aria-label="링크 준비 중"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5.2 8.4 4.7 6 4.8a1 1 0 0 0-1 1v10.4a1 1 0 0 0 1 1c2.3-.1 4.4.4 6 1.6 1.6-1.2 3.7-1.7 6-1.6a1 1 0 0 0 1-1V5.8a1 1 0 0 0-1-1c-2.4-.1-4.5.4-6 1.7Z"/><path d="M12 6.5V19"/></svg></span>`;
-    return `<div class="bookcard">`
-      + `${coverTag}<div class="meta"><div class="bt">${esc(t)}</div>`
-      + `<div class="bsub">${meta}</div>${buyBtn}</div></div>`;
+      ? `<a class="buy" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)}">${icon}</a>`
+      : `<span class="buy off">${icon}</span>`;
+    return `<div class="bookcard">${coverTag}<div class="meta"><div class="bt">${esc(t)}</div><div class="bsub">${meta}</div>${buyBtn}</div></div>`;
   }).join('');
 
-  document.getElementById('authored').innerHTML = authored.map(([t,sub,link])=>{
+  document.getElementById('authored').innerHTML = authored.map(([ko,en,subko,suben,link])=>{
+    const t = (lang==='en' && en) ? en : ko;
+    const sub = (lang==='en' && suben) ? suben : subko;
     const title = (link && link!=='#')
       ? `<a class="bk-link" href="${link}" target="_blank" rel="noopener"><b>${esc(t)}</b></a>`
       : `<b>${esc(t)}</b>`;
