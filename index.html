@@ -79,19 +79,21 @@
   ul.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;}
   ul.tags li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-size:14.5px;color:var(--ink-soft);}
 
-  .yr{font-family:var(--display);font-weight:700;font-size:18px;color:var(--accent);margin:24px 0 6px;}
-  .cite{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--line);}
-  .cite .dot{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:9px;}
-  .cite .body{flex:1;min-width:0;}
-  .cite .ttl{font-weight:500;color:var(--ink);}
-  .cite .ven{display:block;color:var(--muted);font-size:14px;margin-top:2px;}
-  .cite .ven em{font-style:normal;color:var(--ink-soft);}
-  .badge{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--accent-deep);border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin-left:8px;vertical-align:middle;}
-  .pill{display:inline-block;font-family:var(--display);font-size:12px;letter-spacing:.03em;color:var(--ink);
-    border:1px solid var(--line);border-radius:999px;padding:3px 12px;margin-top:7px;text-decoration:none;background:var(--card);transition:all .25s;}
-  .pill:hover{border-color:var(--accent);color:var(--accent-deep);}
-  .pill.ph{color:var(--accent-deep);border-style:dashed;}
+  /* ===== 학술 논문 목록 (날짜 / 「제목」, 『게재지』 · 줄 전체 링크) ===== */
+  ul.paperlist{list-style:none;padding:0;margin:0;}
+  ul.paperlist li{position:relative;padding:11px 0 11px 22px;border-top:1px solid var(--line);}
+  ul.paperlist li:first-child{border-top:none;}
+  ul.paperlist li::before{content:"";position:absolute;left:2px;top:18px;width:6px;height:6px;background:var(--accent);}
+  .pd-link{display:block;text-decoration:none;color:var(--ink);font-size:16px;line-height:1.6;transition:color .2s;}
+  a.pd-link:hover{color:var(--accent-deep);}
+  a.pd-link:hover .pd-main{text-decoration:underline;text-underline-offset:3px;}
+  .pd-date{font-family:var(--display);font-weight:600;color:var(--accent-deep);white-space:nowrap;}
+  .pd-sep{color:var(--line);margin:0 8px;}
+  .pd-venue{color:var(--muted);}
+  .pd-role{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;
+    color:var(--accent-deep);border:1px solid var(--line);border-radius:6px;padding:0 6px;margin:0 4px;vertical-align:1px;}
+  .pd-off{color:var(--ink);cursor:default;}
+  .pd-off .pd-date{color:var(--muted);}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;}
   .bookcard{display:flex;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px;transition:transform .25s,box-shadow .25s;}
@@ -240,38 +242,39 @@ const career = [
   ["2013.03 – 2023.02","<b>강사</b> 고려대학교",""],
   ["2012.09 – 2013.06","<b>강사</b> 순천향대학교",""]
 ];
-// [제목, 게재지 권·면, 연도, 단독/공동, 링크("#"=비움)]
+// [제목, 게재지 권·면, "연.월.", 단독/공동, KCI/DOI 링크("#"=비움)]
 const papers = [
-  ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","열린정신 인문학 연구 27(1), 69–96",2026,"공동","#"],
-  ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","인간연구 58, 179–211",2026,"단독","#"],
-  ["淸末 文獻笑話 탐색 ─ ≪笑笑錄≫의 문헌적 가치와 소화 전승 양상","중국학논총 91, 87-116",2026,"단독","#"],
-  ["디지털 시대 인성교육을 위한 明淸 笑話의 활용","沽山中國學報 15, 203–235",2026,"단독","#"],
-  ["明末 文獻笑話 탐색 ― 李贄 ≪山中一夕話≫ 笑話에 반영된 文人 趣向","중국학논총 88, 31–61",2025,"단독","#"],
-  ["明末 文獻笑話 탐색: 張岱 『快園道古』 속 소화적 성격 고찰","중어중문학 100, 35–66",2025,"단독","#"],
-  ["경계의 해체와 재구성: 장대(張岱)의 『서호몽심(西湖夢尋)』에 나타난 복합적 문학 구조와 그 의미","순천향 인문과학논총 43(4), 35–60",2024,"단독","#"],
-  ["생성형 AI 챗봇을 활용한 문학연구의 가능성과 한계 ― ChatGPT-4.o 기반 장대 챗봇 '대화(岱話)'","중국학논총 85, 289–322",2024,"단독","#"],
-  ["메타버스 기반 대학 비교과 학습환경의 특성 연구 : C대학 'CUK 북 챌린지'","한국게임학회 논문지 23(4), 81–92",2023,"공동","#"],
-  ["明末 民間笑話書 ≪笑府≫ 속 지식인 연구Ⅰ ― 〈腐流〉편","중국학논총 80, 61–85",2023,"단독","#"],
-  ["메타버스로 체험하는 문학 ― 중국 고전산문 수업 설계","순천향 인문과학논총 42(1), 121–145",2023,"단독","#"],
-  ["메타버스 플랫폼 젭(ZEP)을 활용한 모둠 활동 수업 방안 연구","중국어문논총 111, 421–446",2022,"단독","#"],
-  ["明淸 笑話 중 文獻笑話의 의미 재탐색 ― ≪明淸笑話十種≫","중국학논총 77, 77–105",2022,"단독","#"],
-  ["明末 文獻笑話의 웹툰 콘텐츠 제작 연구 ― 馮夢龍 ≪古今譚槪≫〈問牛〉","중국소설논총 67, 107–126",2022,"단독","#"],
-  ["中國 儒家 經典 속 '웃음'의 의미 ― 笑話라는 장르의 이해","중국학논총 76, 123–151",2022,"단독","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (6)","중국어문논총 107, 355–381",2021,"공동","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (5)","중국학논총 72, 279–304",2021,"공동","#"],
-  ["≪古今譚槪≫〈迂腐〉의 飜譯과 註解 (2)","중국어문논총 103, 279–304",2021,"단독","#"],
-  ["明末 서양 과학서 번역 활동의 의의 ― 徐光啓(1562–1633)","중국학논총 70, 135–161",2020,"단독","#"],
-  ["馮夢龍의 ≪古今譚槪≫ 一考","중국어문논총 101, 127–152",2020,"단독","#"],
-  ["≪古今譚槪≫〈迂腐部〉의 飜譯과 註解","중국학논총 69, 337–359",2020,"단독","#"],
-  ["淸初 批評家 孫琮의 評語 分析 ― ≪山曉閣選唐大家柳柳州全集≫","중국어문논총 98, 91–116",2020,"단독","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (4)","중국어문논총 95, 381–407",2019,"공동(제1)","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (3)","중국학논총 64, 299–324",2019,"공동","#"],
-  ["표절과 활용의 경계 ― ≪古文觀止≫에 반영된 前代 選文批評의 의의","중국어문논총 92, 115–143",2019,"단독","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (2)","중국어문논역총간 44, 403–431",2019,"공동","#"],
-  ["≪西湖夢尋≫의 註釋과 飜譯 (2) ― 卷2","중국학논총 60, 203–230",2018,"단독","#"],
-  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (1)","중국어문논총 87, 263–286",2018,"공동","#"],
-  ["≪西湖夢尋≫의 註釋과 飜譯 (1)","중국학논총 58, 467–492",2017,"단독","#"],
-  ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","중국학논총 40, 109–132",2013,"단독","#"]
+  ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","열린정신 인문학 연구 27(1), 69–96","2026.04.","공동","#"],
+  ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","인간연구 58, 179–211","2026.04.","단독","#"],
+  ["淸末 文獻笑話 탐색 ─ ≪笑笑錄≫의 문헌적 가치와 소화 전승 양상","중국학논총 91, 87–116","2026.03.","단독","https://doi.org/10.26585/chlab.2026..91.004"],
+  ["디지털 시대 인성교육을 위한 明淸 笑話의 활용","沽山中國學報 15, 203–235","2026.03.","단독","#"],
+  ["팟캐스트를 활용한 明淸笑話의 인성교육 콘텐츠 제작 연구","중국문화연구 72, 21–42","2026.05.","단독","https://doi.org/10.18212/cccs.2026..72.002"],
+  ["明末 文獻笑話 탐색 ― 李贄 ≪山中一夕話≫ 笑話에 반영된 文人 趣向","중국학논총 88, 31–61","2025.06.","단독","https://doi.org/10.26585/chlab.2025..88.002"],
+  ["明末 文獻笑話 탐색: 張岱 『快園道古』 속 소화적 성격 고찰","중어중문학 100, 35–66","2025.06.","단독","https://doi.org/10.46612/kjcll.2025.06.100.35"],
+  ["경계의 해체와 재구성: 장대(張岱)의 『서호몽심(西湖夢尋)』에 나타난 복합적 문학 구조와 그 의미","순천향 인문과학논총 43(4), 35–60","2024.12.","단독","https://doi.org/10.35222/IHSU.2024.43.4.35"],
+  ["생성형 AI 챗봇을 활용한 문학연구의 가능성과 한계 ― ChatGPT-4.o 기반 장대 챗봇 '대화(岱話)'","중국학논총 85, 289–322","2024.09.","단독","https://doi.org/10.26585/chlab.2024..85.010"],
+  ["메타버스 기반 대학 비교과 학습환경의 특성 연구 : C대학 'CUK 북 챌린지'","한국게임학회 논문지 23(4), 81–92","2023.08.","공동","#"],
+  ["明末 民間笑話書 ≪笑府≫ 속 지식인 연구Ⅰ ― 〈腐流〉편","중국학논총 80, 61–85","2023.06.","단독","#"],
+  ["메타버스로 체험하는 문학 ― 중국 고전산문 수업 설계","순천향 인문과학논총 42(1), 121–145","2023.03.","단독","#"],
+  ["메타버스 플랫폼 젭(ZEP)을 활용한 모둠 활동 수업 방안 연구","중국어문논총 111, 421–446","2022.10.","단독","#"],
+  ["明淸 笑話 중 文獻笑話의 의미 재탐색 ― ≪明淸笑話十種≫","중국학논총 77, 77–105","2022.09.","단독","#"],
+  ["明末 文獻笑話의 웹툰 콘텐츠 제작 연구 ― 馮夢龍 ≪古今譚槪≫〈問牛〉","중국소설논총 67, 107–126","2022.08.","단독","https://doi.org/10.17004/jrcn.2022..67.005"],
+  ["中國 儒家 經典 속 '웃음'의 의미 ― 笑話라는 장르의 이해","중국학논총 76, 123–151","2022.06.","단독","https://doi.org/10.26585/chlab.2022..76.006"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (6)","중국어문논총 107, 355–381","2021.10.","공동","https://doi.org/10.26586/chls.2021..107.014"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (5)","중국학논총 72, 279–304","2021.06.","공동","https://doi.org/10.26585/chlab.2021..72.012"],
+  ["≪古今譚槪≫〈迂腐〉의 飜譯과 註解 (2)","중국어문논총 103, 279–304","2021.02.","단독","https://doi.org/10.26586/chls.2021..103.010"],
+  ["明末 서양 과학서 번역 활동의 의의 ― 徐光啓(1562–1633)","중국학논총 70, 135–161","2020.12.","단독","#"],
+  ["馮夢龍의 ≪古今譚槪≫ 一考","중국어문논총 101, 127–152","2020.10.","단독","#"],
+  ["≪古今譚槪≫〈迂腐部〉의 飜譯과 註解","중국학논총 69, 337–359","2020.09.","단독","#"],
+  ["淸初 批評家 孫琮의 評語 分析 ― ≪山曉閣選唐大家柳柳州全集≫","중국어문논총 98, 91–116","2020.04.","단독","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (4)","중국어문논총 95, 381–407","2019.10.","공동(제1)","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (3)","중국학논총 64, 299–324","2019.06.","공동","#"],
+  ["표절과 활용의 경계 ― ≪古文觀止≫에 반영된 前代 選文批評의 의의","중국어문논총 92, 115–143","2019.04.","단독","https://doi.org/10.26586/chls.2019..92.005"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (2)","중국어문논역총간 44, 403–431","2019.01.","공동","https://doi.org/10.35822/JCLLT.2019.01.44.403"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (2) ― 卷2","중국학논총 60, 203–230","2018.06.","단독","https://doi.org/10.26585/chlab.2018..60.010"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (1)","중국어문논총 87, 263–286","2018.06.","공동","#"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (1)","중국학논총 58, 467–492","2017.12.","단독","#"],
+  ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","중국학논총 40, 109–132","2013.12.","단독","#"]
 ];
 // [제목, 원저자·출판사, 연도, 역할, 표지이미지URL(""=비움), 교보링크("#"=비움)]
 const translations = [
@@ -302,16 +305,22 @@ function render(){
     `<div class="row"><div class="when">${esc(w)}</div><div class="what">${what}${sub?`<span>${esc(sub)}</span>`:''}</div></div>`).join('');
   document.getElementById('education').innerHTML = rowsHtml(education);
   document.getElementById('career').innerHTML = rowsHtml(career);
-  let html='', curYear=null;
-  for(const [t,v,y,role,link] of papers){
-    if(y!==curYear){ html+=`<div class="yr">${y}</div>`; curYear=y; }
-    const pill = (link && link!=='#') ? `<a class="pill" href="${link}" target="_blank" rel="noopener">원문 ↗</a>`
-                                      : `<a class="pill ph" href="#">［링크］</a>`;
-    html+=`<div class="cite"><span class="dot"></span><div class="body">`
-        + `<span class="ttl">${esc(t)}<span class="badge">${esc(role)}</span></span>`
-        + `<span class="ven"><em>${esc(v)}</em></span>${pill}</div></div>`;
-  }
-  document.getElementById('papers').innerHTML = html;
+
+  // 한 줄: 날짜 / 「제목」, 『게재지』  — 줄 전체가 링크. 링크 없으면(#) 비활성 표시.
+  const itemHtml = ([t,v,date,role,link])=>{
+    const venue = String(v).replace(/\s*\d.*$/,'').trim();           // 게재지명만 (권·면 제거)
+    const detail = String(v).slice(venue.length).replace(/^[\s,]+/,'');// 권·면 정보
+    const inner = `<span class="pd-date">${esc(date)}</span>`
+                + `<span class="pd-sep">/</span>`
+                + `<span class="pd-main">「${esc(t)}」<span class="pd-role">${esc(role)}</span>`
+                + `<span class="pd-venue">,『${esc(venue)}』${detail?` ${esc(detail)}`:''}</span></span>`;
+    return (link && link!=='#')
+      ? `<li><a class="pd-link" href="${link}" target="_blank" rel="noopener">${inner}</a></li>`
+      : `<li><span class="pd-link pd-off" title="링크 준비 중">${inner}</span></li>`;
+  };
+  document.getElementById('papers').innerHTML =
+    `<ul class="paperlist">${papers.map(itemHtml).join('')}</ul>`;
+
   document.getElementById('translations').innerHTML = translations.map(([t,sub,y,role,img,link])=>{
     const href = (link && link!=='#') ? link : '#';
     const cover = img ? `<img src="${img}" alt="${esc(t)} 표지">` : `<span>［표지］</span>`;
