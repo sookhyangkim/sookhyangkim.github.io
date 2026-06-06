@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김숙향 (金淑香) · 학술 아카이브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff;
+    --card:#FAFAFA;
+    --ink:#1a1a1a;
+    --ink-soft:#3a3a3a;
+    --muted:#767676;
+    --line:#E6E4E0;
+    --accent:#FC2D8E;
+    --accent-deep:#C71585;
+    --maxw:880px;
+    --display:'Pretendard','Noto Sans KR',system-ui,-apple-system,sans-serif;
+    --body:'Pretendard','Noto Sans KR',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--body);line-height:1.7;font-size:16.5px;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+  .lang-ko .en,.lang-en .ko{display:none !important;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);
+    backdrop-filter:saturate(120%) blur(8px);-webkit-backdrop-filter:saturate(120%) blur(8px);
+    border-bottom:1px solid var(--line);}
+  .bar{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .brand{font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:.01em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  nav.links{display:flex;gap:18px;flex-wrap:wrap;}
+  nav.links a{font-family:var(--display);font-size:13.5px;letter-spacing:.02em;color:var(--ink-soft);text-decoration:none;position:relative;padding-bottom:2px;}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--accent);transition:width .35s ease;}
+  nav.links a:hover{color:var(--accent-deep);}nav.links a:hover::after{width:100%;}
+  .lang{display:flex;align-items:center;gap:7px;font-family:var(--display);font-size:13px;letter-spacing:.06em;}
+  .lang button{background:none;border:none;cursor:pointer;padding:0;font:inherit;color:var(--muted);transition:color .25s;}
+  .lang button.active{color:var(--ink);}.lang .sep{color:var(--line);}
+
+  .profile{display:flex;gap:34px;align-items:flex-start;padding:60px 0 46px;}
+  .portrait{flex:0 0 168px;}
+  .portrait .ph-img{width:168px;height:204px;border-radius:14px;border:1px solid var(--line);
+    background:linear-gradient(160deg,#F2F2F2,#E9E9E9);display:flex;align-items:center;justify-content:center;
+    color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;}
+  .pinfo{flex:1;min-width:0;}
+  .pinfo h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
+  .pinfo .hanja{font-family:var(--display);font-weight:300;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
+  .pinfo .role{font-family:var(--display);font-weight:500;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
+  .pinfo .affil{color:var(--muted);font-size:15px;margin:0 0 18px;}
+
+  .iconrow{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .iconrow a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);
+    display:flex;align-items:center;justify-content:center;color:var(--ink-soft);text-decoration:none;
+    transition:all .3s ease;font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.02em;}
+  .iconrow a:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px);}
+  .iconrow a svg{width:18px;height:18px;display:block;}
+  .bio p{margin:0 0 12px;color:var(--ink-soft);font-size:16px;}
+
+  section{padding:42px 0;border-top:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;}
+  .sec-head .num{font-family:var(--display);font-weight:600;color:var(--accent);font-size:14px;letter-spacing:.04em;}
+  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
+
+  .rows{display:flex;flex-direction:column;}
+  .row{display:flex;gap:20px;padding:13px 0;border-top:1px solid var(--line);}
+  .row:first-child{border-top:none;}
+  .row .when{flex:0 0 150px;font-family:var(--display);font-weight:500;color:var(--muted);font-size:14px;line-height:1.5;}
+  .row .what{flex:1;}.row .what b{font-weight:600;}
+  .row .what span{display:block;color:var(--muted);font-size:14px;margin-top:1px;}
+
+  ul.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;}
+  ul.tags li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-size:14.5px;color:var(--ink-soft);}
+
+  .yr{font-family:var(--display);font-weight:700;font-size:18px;color:var(--accent);margin:24px 0 6px;}
+  .cite{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--line);}
+  .cite .dot{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:9px;}
+  .cite .body{flex:1;min-width:0;}
+  .cite .ttl{font-weight:500;color:var(--ink);}
+  .cite .ven{display:block;color:var(--muted);font-size:14px;margin-top:2px;}
+  .cite .ven em{font-style:normal;color:var(--ink-soft);}
+  .badge{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent-deep);border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin-left:8px;vertical-align:middle;}
+  .pill{display:inline-block;font-family:var(--display);font-size:12px;letter-spacing:.03em;color:var(--ink);
+    border:1px solid var(--line);border-radius:999px;padding:3px 12px;margin-top:7px;text-decoration:none;background:var(--card);transition:all .25s;}
+  .pill:hover{border-color:var(--accent);color:var(--accent-deep);}
+  .pill.ph{color:var(--accent-deep);border-style:dashed;}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;}
+  .bookcard{display:flex;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px;transition:transform .25s,box-shadow .25s;}
+  .bookcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px -16px rgba(28,25,21,.4);}
+  .bookcard .cover{flex:0 0 76px;height:108px;border-radius:8px;border:1px dashed var(--accent);
+    background:#F2F2F2;display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--accent-deep);font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;}
+  .bookcard .cover img{width:100%;height:100%;object-fit:cover;}
+  .bookcard .meta{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .bookcard .meta .bt{font-weight:600;font-size:15px;line-height:1.35;}
+  .bookcard .meta .bsub{color:var(--muted);font-size:13px;margin-top:3px;flex:1;}
+
+  ul.simple{list-style:none;padding:0;margin:0;}
+  ul.simple li{padding:11px 0;border-top:1px solid var(--line);font-size:15.5px;}
+  ul.simple li:first-child{border-top:none;}
+  ul.simple li span{color:var(--muted);font-size:13.5px;}
+
+  footer{border-top:1px solid var(--line);padding:40px 0 64px;color:var(--muted);}
+  footer .fl{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
+  footer a{color:var(--ink-soft);text-decoration:none;font-size:14px;border-bottom:1px solid transparent;transition:.3s;}
+  footer a:hover{color:var(--accent-deep);border-color:var(--accent);}
+  footer .cr{font-size:12.5px;letter-spacing:.04em;}
+  .ph{color:var(--accent-deep);}
+
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none;}html{scroll-behavior:auto;}}
+  @media (max-width:640px){
+    nav.links{display:none;}
+    .profile{flex-direction:column;gap:22px;}
+    .portrait{flex:0 0 auto;}.portrait .ph-img{width:140px;height:170px;}
+  }
+</style>
+</head>
+<body class="lang-ko">
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#top">김숙향 <span style="color:var(--muted);font-weight:300">金淑香</span></a>
+    <nav class="links">
+      <a href="#about"><span class="ko">소개</span><span class="en">About</span></a>
+      <a href="#research"><span class="ko">연구</span><span class="en">Research</span></a>
+      <a href="#pubs"><span class="ko">논문</span><span class="en">Articles</span></a>
+      <a href="#books"><span class="ko">저·역서</span><span class="en">Books</span></a>
+      <a href="#teaching"><span class="ko">강의</span><span class="en">Teaching</span></a>
+    </nav>
+    <div class="lang">
+      <button id="btn-ko" class="active" onclick="setLang('ko')">KO</button><span class="sep">/</span><button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="profile">
+    <div class="portrait reveal d1">
+      <div class="ph-img"><span class="ko">사진</span><span class="en">Photo</span></div>
+    </div>
+    <div class="pinfo reveal d2">
+      <h1>김숙향 <span class="hanja">金淑香</span></h1>
+      <p class="role"><span class="ko">학술연구교수 · 중국 명청문학</span><span class="en">Academic Research Professor · Ming–Qing Literature</span></p>
+      <p class="affil"><span class="ko">고려대학교 중국학연구소 · 한국연구재단 학술연구교수(A형, 2023–2028)</span><span class="en">Center for Chinese Studies, Korea University · NRF Academic Research Professor (Type A, 2023–2028)</span></p>
+      <div class="iconrow">
+        <a class="ph" href="#" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a class="ph" href="#" title="ORCID" aria-label="ORCID">iD</a>
+        <a class="ph" href="#" title="Google Scholar" aria-label="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v3.3c0 1.6 3.1 3.5 7 3.5s7-1.9 7-3.5v-3.3l-7 3.8z"/></svg></a>
+        <a class="ph" href="#" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+        <a class="ph" href="#" title="Home" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21C9.5 18.5 8.2 15.3 8.2 12S9.5 5.5 12 3Z"/></svg></a>
+      </div>
+      <div class="bio">
+        <p class="ko">명청(明淸) 시대의 소화(笑話) 문헌을 중심으로, 풍몽룡·장대·김성탄으로 이어지는 문인들의 편집·비평 의식과 雅/俗의 문화 위계를 연구합니다. 최근에는 디지털인문학 방법론으로 소화 코퍼스를 구축하고 그 경계와 편집 양상을 분석하는 작업을 이어가고 있습니다.</p>
+        <p class="en">My research centers on the comic literature (<em>xiaohua</em>) of the Ming–Qing period — the editorial and critical consciousness of literati from Feng Menglong to Zhang Dai and Jin Shengtan, and the elegant/vulgar (<em>ya/su</em>) cultural hierarchy. I am building a digital corpus of <em>xiaohua</em> to analyze how the genre's boundaries are editorially constructed.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="sec-head"><span class="num">01</span><h2><span class="ko">연구 관심</span><span class="en">Research Interests</span></h2></div>
+    <ul class="tags" id="interests"></ul>
+  </section>
+
+  <section id="research">
+    <div class="sec-head"><span class="num">02</span><h2><span class="ko">학력</span><span class="en">Education</span></h2></div>
+    <div class="rows" id="education"></div>
+    <div class="sec-head" style="margin-top:40px"><span class="num">03</span><h2><span class="ko">경력</span><span class="en">Career</span></h2></div>
+    <div class="rows" id="career"></div>
+  </section>
+
+  <section id="pubs">
+    <div class="sec-head"><span class="num">04</span><h2><span class="ko">학술 논문</span><span class="en">Journal Articles</span></h2></div>
+    <div id="papers"></div>
+  </section>
+
+  <section id="books">
+    <div class="sec-head"><span class="num">05</span><h2><span class="ko">역서</span><span class="en">Translations</span></h2></div>
+    <p style="color:var(--muted);font-size:14px;margin:-6px 0 18px">
+      <span class="ko">표지를 클릭하면 교보문고로 이동합니다. (표지 이미지와 링크는 아래 데이터의 ［ ］ 자리에 넣으세요.)</span>
+      <span class="en">Click a cover to open its Kyobo page. (Add the cover image and link in the data slots below.)</span>
+    </p>
+    <div class="grid" id="translations"></div>
+
+    <div class="sec-head" style="margin-top:40px"><span class="num">06</span><h2><span class="ko">저서</span><span class="en">Authored Books</span></h2></div>
+    <ul class="simple" id="authored"></ul>
+  </section>
+
+  <section id="teaching">
+    <div class="sec-head"><span class="num">07</span><h2><span class="ko">강의</span><span class="en">Teaching</span></h2></div>
+    <ul class="simple">
+      <li><b>과학기술과 사회</b> <span class="ko">· 학생 사례연구에서 도출한 쟁점으로 구성한 VS토론 수업</span><span class="en">· Science, Technology &amp; Society — a debate-based course</span></li>
+      <li><b>중국 인문 텍스트와 디지털 큐레이션</b> <span class="ko">· 고전 텍스트를 디지털 방법으로 다루는 실습 강의</span><span class="en">· Chinese Humanities Texts &amp; Digital Curation</span></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">
+      <a class="ph" href="#"><span class="ko">이메일</span><span class="en">Email</span></a>
+      <a class="ph" href="#">ORCID</a>
+      <a class="ph" href="#">Google Scholar</a>
+      <a class="ph" href="#">GitHub</a>
+    </div>
+    <div class="cr">© <span id="yr"></span> 김숙향 (金淑香).</div>
+  </div>
+</footer>
+
+<script>
+/* ===== 데이터: 여기만 고치면 사이트가 업데이트됩니다 ===== */
+const interests = {
+  ko:["명청 소화(笑話) 문헌","풍몽룡·장대·김성탄의 편집·비평","雅/俗 문화 위계와 장르 이론","디지털인문학 · 코퍼스 구축","AI 활용 문학 연구"],
+  en:["Ming–Qing xiaohua","Feng Menglong · Zhang Dai · Jin Shengtan","Ya/su hierarchy & genre theory","Digital Humanities · corpus building","AI-assisted literary research"]
+};
+const education = [
+  ["2012.06","<b>박사</b> 復旦大學(중국) 中國古代文學","학위논문 「金聖嘆古文批評研究」 · 지도교수 黃霖"],
+  ["2009.03","<b>박사 수료</b> 고려대학교 중어중문학과",""],
+  ["2005.06","<b>석사</b> 고려대학교 중어중문학과","중국고전산문 · 지도교수 이재훈"],
+  ["2002.02","<b>학사</b> 순천향대학교 중어중문과",""]
+];
+const career = [
+  ["2023.07 – 현재","<b>연구교수</b> 고려대학교 중국학연구소",""],
+  ["2022.11 – 2023.06","<b>전임연구원</b> 가톨릭대학교",""],
+  ["2019.09 – 2023.02","<b>강사</b> 가천대학교",""],
+  ["2018.03 – 2019.02","<b>연구교수</b> 고려대학교 중국학연구소",""],
+  ["2016.09 – 2017.08","<b>초빙교수</b> 숭실대학교",""],
+  ["2013.03 – 2023.02","<b>강사</b> 고려대학교",""],
+  ["2012.09 – 2013.06","<b>강사</b> 순천향대학교",""]
+];
+// [제목, 게재지 권·면, 연도, 단독/공동, 링크("#"=비움)]
+const papers = [
+  ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","열린정신 인문학 연구 27(1), 69–96",2026,"공동","#"],
+  ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","인간연구 58, 179–211",2026,"단독","#"],
+  ["淸末 文獻笑話 탐색 ― ≪笑笑錄≫의 문헌적 가치와 소화 전승 양상","중국학논총 91, 87–116",2026,"단독","#"],
+  ["디지털 시대 인성교육을 위한 明淸 笑話의 활용","沽山中國學報 15, 203–235",2026,"단독","#"],
+  ["明末 文獻笑話 탐색 ― 李贄 ≪山中一夕話≫ 笑話에 반영된 文人 趣向","중국학논총 88, 31–61",2025,"단독","#"],
+  ["明末 文獻笑話 탐색: 張岱 『快園道古』 속 소화적 성격 고찰","중어중문학 100, 35–66",2025,"단독","#"],
+  ["경계의 해체와 재구성: 장대(張岱)의 『서호몽심(西湖夢尋)』에 나타난 복합적 문학 구조와 그 의미","순천향 인문과학논총 43(4), 35–60",2024,"단독","#"],
+  ["생성형 AI 챗봇을 활용한 문학연구의 가능성과 한계 ― ChatGPT-4.o 기반 장대 챗봇 '대화(岱話)'","중국학논총 85, 289–322",2024,"단독","#"],
+  ["메타버스 기반 대학 비교과 학습환경의 특성 연구 : C대학 'CUK 북 챌린지'","한국게임학회 논문지 23(4), 81–92",2023,"공동","#"],
+  ["明末 民間笑話書 ≪笑府≫ 속 지식인 연구Ⅰ ― 〈腐流〉편","중국학논총 80, 61–85",2023,"단독","#"],
+  ["메타버스로 체험하는 문학 ― 중국 고전산문 수업 설계","순천향 인문과학논총 42(1), 121–145",2023,"단독","#"],
+  ["메타버스 플랫폼 젭(ZEP)을 활용한 모둠 활동 수업 방안 연구","중국어문논총 111, 421–446",2022,"단독","#"],
+  ["明淸 笑話 중 文獻笑話의 의미 재탐색 ― ≪明淸笑話十種≫","중국학논총 77, 77–105",2022,"단독","#"],
+  ["明末 文獻笑話의 웹툰 콘텐츠 제작 연구 ― 馮夢龍 ≪古今譚槪≫〈問牛〉","중국소설논총 67, 107–126",2022,"단독","#"],
+  ["中國 儒家 經典 속 '웃음'의 의미 ― 笑話라는 장르의 이해","중국학논총 76, 123–151",2022,"단독","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (6)","중국어문논총 107, 355–381",2021,"공동","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (5)","중국학논총 72, 279–304",2021,"공동","#"],
+  ["≪古今譚槪≫〈迂腐〉의 飜譯과 註解 (2)","중국어문논총 103, 279–304",2021,"단독","#"],
+  ["明末 서양 과학서 번역 활동의 의의 ― 徐光啓(1562–1633)","중국학논총 70, 135–161",2020,"단독","#"],
+  ["馮夢龍의 ≪古今譚槪≫ 一考","중국어문논총 101, 127–152",2020,"단독","#"],
+  ["≪古今譚槪≫〈迂腐部〉의 飜譯과 註解","중국학논총 69, 337–359",2020,"단독","#"],
+  ["淸初 批評家 孫琮의 評語 分析 ― ≪山曉閣選唐大家柳柳州全集≫","중국어문논총 98, 91–116",2020,"단독","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (4)","중국어문논총 95, 381–407",2019,"공동(제1)","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (3)","중국학논총 64, 299–324",2019,"공동","#"],
+  ["표절과 활용의 경계 ― ≪古文觀止≫에 반영된 前代 選文批評의 의의","중국어문논총 92, 115–143",2019,"단독","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (2)","중국어문논역총간 44, 403–431",2019,"공동","#"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (2) ― 卷2","중국학논총 60, 203–230",2018,"단독","#"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (1)","중국어문논총 87, 263–286",2018,"공동","#"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (1)","중국학논총 58, 467–492",2017,"단독","#"],
+  ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","중국학논총 40, 109–132",2013,"단독","#"]
+];
+// [제목, 원저자·출판사, 연도, 역할, 표지이미지URL(""=비움), 교보링크("#"=비움)]
+const translations = [
+  ["서호몽심 (西湖夢尋)","역락",2024,"책임","","#"],
+  ["池北偶談: 談故 1","王士禛 · 퍼플",2024,"공역","","#"],
+  ["도암몽억 (陶庵夢憶)","張岱 · 세창출판사",2020,"책임","","#"],
+  ["자수","류옹 · 한국학술정보",2016,"책임","","#"],
+  ["난징함락과 대학살 1–4","저우얼푸 · 한국학술정보",2015,"책임","","#"],
+  ["중국의 전통장신구 上·下","탕쉬샹·왕진화 · 한국학술정보",2015,"책임","","#"],
+  ["(똑똑한 리더의) 맹자지혜","천신후이 · 북메이드",2011,"책임","","#"],
+  ["제왕","우한 · 살림출판사",2010,"책임","","#"],
+  ["대여행가","우한 · 살림출판사",2009,"책임","","#"],
+  ["명장","우한 · 살림출판사",2008,"책임","","#"]
+];
+const authored = [
+  ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","북코리 · 2025"],
+  ["관광중국어 2 (공저)","백산 · 2020"],
+  ["관광중국어 1 (공저)","백산 · 2020"],
+  ["(NCS 기반) 호텔실무 중국어회화 (공저)","백산출판사 · 2017"]
+];
+/* ===== 데이터 끝 ===== */
+
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function render(){
+  const lang = document.body.classList.contains('lang-en') ? 'en' : 'ko';
+  document.getElementById('interests').innerHTML = interests[lang].map(t=>`<li>${esc(t)}</li>`).join('');
+  const rowsHtml = arr => arr.map(([w,what,sub])=>
+    `<div class="row"><div class="when">${esc(w)}</div><div class="what">${what}${sub?`<span>${esc(sub)}</span>`:''}</div></div>`).join('');
+  document.getElementById('education').innerHTML = rowsHtml(education);
+  document.getElementById('career').innerHTML = rowsHtml(career);
+  let html='', curYear=null;
+  for(const [t,v,y,role,link] of papers){
+    if(y!==curYear){ html+=`<div class="yr">${y}</div>`; curYear=y; }
+    const pill = (link && link!=='#') ? `<a class="pill" href="${link}" target="_blank" rel="noopener">원문 ↗</a>`
+                                      : `<a class="pill ph" href="#">［링크］</a>`;
+    html+=`<div class="cite"><span class="dot"></span><div class="body">`
+        + `<span class="ttl">${esc(t)}<span class="badge">${esc(role)}</span></span>`
+        + `<span class="ven"><em>${esc(v)}</em></span>${pill}</div></div>`;
+  }
+  document.getElementById('papers').innerHTML = html;
+  document.getElementById('translations').innerHTML = translations.map(([t,sub,y,role,img,link])=>{
+    const href = (link && link!=='#') ? link : '#';
+    const cover = img ? `<img src="${img}" alt="${esc(t)} 표지">` : `<span>［표지］</span>`;
+    return `<a class="bookcard" href="${href}" ${href!=='#'?'target="_blank" rel="noopener"':''} style="text-decoration:none;color:inherit">`
+      + `<div class="cover">${cover}</div><div class="meta"><div class="bt">${esc(t)}</div>`
+      + `<div class="bsub">${esc(sub)} · ${y} · ${esc(role)}</div>`
+      + `<span class="pill ${href==='#'?'ph':''}">교보문고 ↗</span></div></a>`;
+  }).join('');
+  document.getElementById('authored').innerHTML = authored.map(([t,sub])=>
+    `<li><b>${esc(t)}</b> <span>${esc(sub)}</span></li>`).join('');
+}
+function setLang(l){
+  document.body.classList.toggle('lang-ko', l==='ko');
+  document.body.classList.toggle('lang-en', l==='en');
+  document.documentElement.lang=l;
+  document.getElementById('btn-ko').classList.toggle('active',l==='ko');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  render();
+}
+document.getElementById('yr').textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
