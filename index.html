@@ -6,9 +6,8 @@
 <title>김숙향 (金淑香) · 학술 아카이브</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#ffffff;
@@ -20,8 +19,9 @@
     --accent:#FC2D8E;
     --accent-deep:#C71585;
     --maxw:880px;
-    --display:'Gowun Batang','Noto Sans KR',serif;
-    --body:'Gowun Batang','Noto Sans KR',serif;
+    --display:'IBM Plex Sans KR','Noto Sans KR',system-ui,-apple-system,sans-serif;
+    --serif:'Noto Serif KR','Nanum Myeongjo',serif;
+    --body:'IBM Plex Sans KR','Noto Sans KR',system-ui,-apple-system,sans-serif;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -52,8 +52,8 @@
     background:linear-gradient(160deg,#F2F2F2,#E9E9E9);display:flex;align-items:center;justify-content:center;
     color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;}
   .pinfo{flex:1;min-width:0;}
-  .pinfo h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
-  .pinfo .hanja{font-family:var(--display);font-weight:400;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
+  .pinfo h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
+  .pinfo .hanja{font-family:var(--serif);font-weight:500;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
   .pinfo .role{font-family:var(--display);font-weight:700;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
   .pinfo .affil{color:var(--muted);font-size:15px;margin:0 0 18px;}
 
@@ -68,7 +68,7 @@
   section{padding:42px 0;border-top:1px solid var(--line);}
   .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;}
   .sec-head .num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.04em;}
-  .sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
+  .sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
 
   .rows{display:flex;flex-direction:column;}
   .row{display:flex;gap:20px;padding:13px 0;border-top:1px solid var(--line);}
@@ -240,11 +240,10 @@ const interests = {
   en:["Ming–Qing xiaohua","Feng Menglong · Zhang Dai · Jin Shengtan","Ya/su hierarchy & genre theory","Digital Humanities · corpus building","AI-assisted literary research","Content curation & production"]
 };
 const education = [
-  ["2012.06","<b>박사</b> 復旦大學(중국) 中國古代文學 <span style=\"color:var(--muted);font-size:14px\">· 학위논문 「金聖嘆古文批評研究」 · 지도교수 黃霖</span>",""],
+  ["2012.06","<b>박사</b> 復旦大學(중국) 中國古代文學","학위논문 「金聖嘆古文批評研究」 · 지도교수 黃霖"],
   ["2009.03","<b>박사 수료</b> 고려대학교 중어중문학과",""],
   ["2005.06","<b>석사</b> 고려대학교 중어중문학과","張岱『陶庵夢憶』연구 · 지도교수 이재훈"],
   ["2002.02","<b>학사</b> 순천향대학교 중어중문과",""]
-  
 ];
 const career = [
   ["2023.07 – 현재","<b>연구교수</b> 고려대학교 중국학연구소",""],
