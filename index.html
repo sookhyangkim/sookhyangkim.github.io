@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#ffffff;
@@ -19,8 +20,8 @@
     --accent:#FC2D8E;
     --accent-deep:#C71585;
     --maxw:880px;
-    --display:'Pretendard','Noto Sans KR',system-ui,-apple-system,sans-serif;
-    --body:'Pretendard','Noto Sans KR',system-ui,-apple-system,sans-serif;
+    --display:'Gowun Batang','Noto Sans KR',serif;
+    --body:'Gowun Batang','Noto Sans KR',serif;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -36,7 +37,7 @@
     backdrop-filter:saturate(120%) blur(8px);-webkit-backdrop-filter:saturate(120%) blur(8px);
     border-bottom:1px solid var(--line);}
   .bar{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-  .brand{font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:.01em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;text-decoration:none;color:var(--ink);white-space:nowrap;}
   nav.links{display:flex;gap:18px;flex-wrap:wrap;}
   nav.links a{font-family:var(--display);font-size:13.5px;letter-spacing:.02em;color:var(--ink-soft);text-decoration:none;position:relative;padding-bottom:2px;}
   nav.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--accent);transition:width .35s ease;}
@@ -51,29 +52,29 @@
     background:linear-gradient(160deg,#F2F2F2,#E9E9E9);display:flex;align-items:center;justify-content:center;
     color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;}
   .pinfo{flex:1;min-width:0;}
-  .pinfo h1{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
-  .pinfo .hanja{font-family:var(--display);font-weight:300;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
-  .pinfo .role{font-family:var(--display);font-weight:500;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
+  .pinfo h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
+  .pinfo .hanja{font-family:var(--display);font-weight:400;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
+  .pinfo .role{font-family:var(--display);font-weight:700;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
   .pinfo .affil{color:var(--muted);font-size:15px;margin:0 0 18px;}
 
   .iconrow{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
   .iconrow a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);
     display:flex;align-items:center;justify-content:center;color:var(--ink-soft);text-decoration:none;
-    transition:all .3s ease;font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.02em;}
+    transition:all .3s ease;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.02em;}
   .iconrow a:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px);}
   .iconrow a svg{width:18px;height:18px;display:block;}
   .bio p{margin:0 0 12px;color:var(--ink-soft);font-size:16px;}
 
   section{padding:42px 0;border-top:1px solid var(--line);}
   .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;}
-  .sec-head .num{font-family:var(--display);font-weight:600;color:var(--accent);font-size:14px;letter-spacing:.04em;}
-  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
+  .sec-head .num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.04em;}
+  .sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
 
   .rows{display:flex;flex-direction:column;}
   .row{display:flex;gap:20px;padding:13px 0;border-top:1px solid var(--line);}
   .row:first-child{border-top:none;}
-  .row .when{flex:0 0 150px;font-family:var(--display);font-weight:500;color:var(--muted);font-size:14px;line-height:1.5;}
-  .row .what{flex:1;}.row .what b{font-weight:600;}
+  .row .when{flex:0 0 150px;font-family:var(--display);font-weight:700;color:var(--muted);font-size:14px;line-height:1.5;}
+  .row .what{flex:1;}.row .what b{font-weight:700;}
   .row .what span{display:block;color:var(--muted);font-size:14px;margin-top:1px;}
 
   ul.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;}
@@ -87,7 +88,7 @@
   .pd-link{display:block;text-decoration:none;color:var(--ink);font-size:16px;line-height:1.6;transition:color .2s;}
   a.pd-link:hover{color:var(--accent-deep);}
   a.pd-link:hover .pd-main{text-decoration:underline;text-underline-offset:3px;}
-  .pd-date{font-family:var(--display);font-weight:600;color:var(--accent-deep);white-space:nowrap;}
+  .pd-date{font-family:var(--display);font-weight:700;color:var(--accent-deep);white-space:nowrap;}
   .pd-sep{color:var(--line);margin:0 8px;}
   .pd-venue{color:var(--muted);}
   .pd-role{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;
@@ -100,11 +101,22 @@
   .bookcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px -16px rgba(28,25,21,.4);}
   .bookcard .cover{flex:0 0 76px;height:108px;border-radius:8px;border:1px dashed var(--accent);
     background:#F2F2F2;display:flex;align-items:center;justify-content:center;text-align:center;
-    color:var(--accent-deep);font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;}
+    color:var(--accent-deep);font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;
+    text-decoration:none;transition:filter .25s;}
+  a.cover:hover{filter:brightness(.92);}
   .bookcard .cover img{width:100%;height:100%;object-fit:cover;}
   .bookcard .meta{flex:1;min-width:0;display:flex;flex-direction:column;}
-  .bookcard .meta .bt{font-weight:600;font-size:15px;line-height:1.35;}
+  .bookcard .meta .bt{font-weight:700;font-size:15px;line-height:1.35;color:var(--ink);}
   .bookcard .meta .bsub{color:var(--muted);font-size:13px;margin-top:3px;flex:1;}
+  .buy{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;margin-top:10px;
+    width:34px;height:34px;border-radius:50%;
+    color:var(--accent-deep);text-decoration:none;
+    background:#FCE7F1;border:1px solid #F6C9DE;
+    transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s ease;}
+  .buy svg{width:17px;height:17px;flex:0 0 auto;}
+  a.buy:hover{background:var(--accent);border-color:var(--accent);color:#fff;
+    transform:translateY(-2px) scale(1.06);box-shadow:0 6px 14px -6px rgba(252,45,142,.7);}
+  .buy.off{color:#D9A7BE;background:#FAF1F5;border-style:dashed;border-color:#EED3DF;cursor:default;}
 
   ul.simple{list-style:none;padding:0;margin:0;}
   ul.simple li{padding:11px 0;border-top:1px solid var(--line);font-size:15.5px;}
@@ -133,7 +145,7 @@
 
 <header>
   <div class="bar">
-    <a class="brand" href="#top">KIM SOOK HYANG <span style="color:var(--muted);font-weight:300"></a>
+    <a class="brand" href="#top">KIM SOOK HYANG <span style="color:var(--muted);font-weight:400"></a>
     <nav class="links">
       <a href="#about"><span class="ko">소개</span><span class="en">About</span></a>
       <a href="#research"><span class="ko">연구</span><span class="en">Research</span></a>
@@ -191,8 +203,8 @@
   <section id="books">
     <div class="sec-head"><span class="num">05</span><h2><span class="ko">역서</span><span class="en">Translations</span></h2></div>
     <p style="color:var(--muted);font-size:14px;margin:-6px 0 18px">
-      <span class="ko">표지를 클릭하면 교보문고로 이동합니다. (표지 이미지와 링크는 아래 데이터의 ［ ］ 자리에 넣으세요.)</span>
-      <span class="en">Click a cover to open its Kyobo page. (Add the cover image and link in the data slots below.)</span>
+      <span class="ko">표지 또는 아이콘을 클릭하면 교보문고로 이동합니다. (표지 이미지와 링크는 아래 데이터에 넣으세요.)</span>
+      <span class="en">Click a cover or icon to open its Kyobo page. (Add the cover image and link in the data slots below.)</span>
     </p>
     <div class="grid" id="translations"></div>
 
@@ -276,18 +288,18 @@ const papers = [
   ["≪西湖夢尋≫의 註釋과 飜譯 (1)","중국학논총 58, 467–492","2017.12.","단독","#"],
   ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","중국학논총 40, 109–132","2013.12.","단독","#"]
 ];
-// [제목, 원저자·출판사, 연도, 역할, 표지이미지URL(""=비움), 교보링크("#"=비움)]
+// [제목, "원저자 · 출판사", 연도, 역할(""=없음), 표지이미지URL(""=비움), 교보링크("#"=비움)]
 const translations = [
-  ["서호몽심 (西湖夢尋)","역락",2024,"","#"],
+  ["서호몽심 (西湖夢尋)","역락",2024,"","","#"],
   ["池北偶談: 談故 1","王士禛 · 퍼플",2024,"공역","","#"],
-  ["도암몽억 (陶庵夢憶)","張岱 · 세창출판사",2020,"","#"],
-  ["자수","류옹 · 한국학술정보",2016,"","#"],
-  ["난징함락과 대학살 1–4","저우얼푸 · 한국학술정보",2015,"","#"],
-  ["중국의 전통장신구 上·下","탕쉬샹·왕진화 · 한국학술정보",2015,,"","#"],
-  ["(똑똑한 리더의) 맹자지혜","천신후이 · 북메이드",2011,"","#"],
-  ["제왕","우한 · 살림출판사",2010,"","#"],
-  ["대여행가","우한 · 살림출판사",2009,"","#"],
-  ["명장","우한 · 살림출판사",2008,"","#"]
+  ["도암몽억 (陶庵夢憶)","張岱 · 세창출판사",2020,"","","#"],
+  ["자수","류옹 · 한국학술정보",2016,"","","#"],
+  ["난징함락과 대학살 1–4","저우얼푸 · 한국학술정보",2015,"","","#"],
+  ["중국의 전통장신구 上·下","탕쉬샹·왕진화 · 한국학술정보",2015,"","","#"],
+  ["(똑똑한 리더의) 맹자지혜","천신후이 · 북메이드",2011,"","","#"],
+  ["제왕","우한 · 살림출판사",2010,"","","#"],
+  ["대여행가","우한 · 살림출판사",2009,"","","#"],
+  ["명장","우한 · 살림출판사",2008,"","","#"]
 ];
 const authored = [
   ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","북코리 · 2025"],
@@ -308,8 +320,8 @@ function render(){
 
   // 한 줄: 날짜 / 「제목」, 『게재지』  — 줄 전체가 링크. 링크 없으면(#) 비활성 표시.
   const itemHtml = ([t,v,date,role,link])=>{
-    const venue = String(v).replace(/\s*\d.*$/,'').trim();           // 게재지명만 (권·면 제거)
-    const detail = String(v).slice(venue.length).replace(/^[\s,]+/,'');// 권·면 정보
+    const venue = String(v).replace(/\s*\d.*$/,'').trim();
+    const detail = String(v).slice(venue.length).replace(/^[\s,]+/,'');
     const inner = `<span class="pd-date">${esc(date)}</span>`
                 + `<span class="pd-sep">/</span>`
                 + `<span class="pd-main">「${esc(t)}」<span class="pd-role">${esc(role)}</span>`
@@ -323,11 +335,18 @@ function render(){
 
   document.getElementById('translations').innerHTML = translations.map(([t,sub,y,role,img,link])=>{
     const href = (link && link!=='#') ? link : '#';
+    const linked = href!=='#';
     const cover = img ? `<img src="${img}" alt="${esc(t)} 표지">` : `<span>［표지］</span>`;
-    return `<a class="bookcard" href="${href}" ${href!=='#'?'target="_blank" rel="noopener"':''} style="text-decoration:none;color:inherit">`
-      + `<div class="cover">${cover}</div><div class="meta"><div class="bt">${esc(t)}</div>`
-      + `<div class="bsub">${esc(sub)} · ${y} · ${esc(role)}</div>`
-      + `<span class="pill ${href==='#'?'ph':''}">교보문고 ↗</span></div></a>`;
+    const meta = [sub, y, role].filter(x=>x!==undefined && x!==null && String(x).trim()!=='').map(esc).join(' · ');
+    const coverTag = linked
+      ? `<a class="cover" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)} 교보문고에서 보기">${cover}</a>`
+      : `<span class="cover">${cover}</span>`;
+    const buyBtn = linked
+      ? `<a class="buy" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)} 구매 페이지로 이동"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5.2 8.4 4.7 6 4.8a1 1 0 0 0-1 1v10.4a1 1 0 0 0 1 1c2.3-.1 4.4.4 6 1.6 1.6-1.2 3.7-1.7 6-1.6a1 1 0 0 0 1-1V5.8a1 1 0 0 0-1-1c-2.4-.1-4.5.4-6 1.7Z"/><path d="M12 6.5V19"/></svg></a>`
+      : `<span class="buy off" aria-label="링크 준비 중"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5.2 8.4 4.7 6 4.8a1 1 0 0 0-1 1v10.4a1 1 0 0 0 1 1c2.3-.1 4.4.4 6 1.6 1.6-1.2 3.7-1.7 6-1.6a1 1 0 0 0 1-1V5.8a1 1 0 0 0-1-1c-2.4-.1-4.5.4-6 1.7Z"/><path d="M12 6.5V19"/></svg></span>`;
+    return `<div class="bookcard">`
+      + `${coverTag}<div class="meta"><div class="bt">${esc(t)}</div>`
+      + `<div class="bsub">${meta}</div>${buyBtn}</div></div>`;
   }).join('');
   document.getElementById('authored').innerHTML = authored.map(([t,sub])=>
     `<li><b>${esc(t)}</b> <span>${esc(sub)}</span></li>`).join('');
