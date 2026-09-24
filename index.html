@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kim Sook Hyang (金淑香) · Academic Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff; --card:#FAFAFA; --ink:#1a1a1a; --ink-soft:#3a3a3a;
+    --muted:#767676; --line:#E6E4E0; --accent:#FC2D8E; --accent-deep:#C71585;
+    --maxw:880px;
+    --display:'IBM Plex Sans KR','Noto Sans KR',system-ui,-apple-system,sans-serif;
+    --serif:'Noto Serif KR','Nanum Myeongjo',serif;
+    --body:'IBM Plex Sans KR','Noto Sans KR',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+  .lang-ko .en,.lang-ko .zh,.lang-en .ko,.lang-en .zh,.lang-zh .ko,.lang-zh .en{display:none !important;}
+  body.lang-zh{--display:'Noto Sans SC','IBM Plex Sans KR',system-ui,sans-serif;--serif:'Noto Serif SC','Noto Serif KR',serif;--body:'Noto Sans SC','IBM Plex Sans KR',system-ui,sans-serif;}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(120%) blur(8px);-webkit-backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line);}
+  .bar{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .brand{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  nav.links{display:flex;gap:18px;flex-wrap:wrap;}
+  nav.links a{font-family:var(--display);font-size:13.5px;letter-spacing:.02em;color:var(--ink-soft);text-decoration:none;position:relative;padding-bottom:2px;}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--accent);transition:width .35s ease;}
+  nav.links a:hover{color:var(--accent-deep);}nav.links a:hover::after{width:100%;}
+  .lang{display:flex;align-items:center;gap:7px;font-family:var(--display);font-size:13px;letter-spacing:.06em;}
+  .lang button{background:none;border:none;cursor:pointer;padding:0;font:inherit;color:var(--muted);transition:color .25s;}
+  .lang button.active{color:var(--ink);}.lang .sep{color:var(--line);}
+  .profile{display:flex;gap:34px;align-items:flex-start;padding:60px 0 46px;}
+  .portrait{flex:0 0 168px;}
+  .portrait .ph-img{width:168px;height:204px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(160deg,#F2F2F2,#E9E9E9);display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;}
+  .pinfo{flex:1;min-width:0;}
+  .pinfo h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:2px 0 4px;}
+  .pinfo .hanja{font-family:var(--serif);font-weight:500;color:var(--muted);font-size:.5em;letter-spacing:.04em;}
+  .pinfo .role{font-family:var(--display);font-weight:700;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
+  .pinfo .affil{color:var(--muted);font-size:15px;margin:0 0 18px;}
+  .iconrow{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .iconrow a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);text-decoration:none;transition:all .3s ease;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.02em;}
+  .iconrow a:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px);}
+  .iconrow a svg{width:18px;height:18px;display:block;}
+  .bio p{position:relative;margin:0 0 14px;padding-left:22px;color:var(--ink-soft);font-size:16px;}
+  .bio p::before{content:"";position:absolute;left:2px;top:.8em;width:10px;height:2px;background:var(--accent);}
+  section{padding:42px 0;border-top:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;}
+  .sec-head .num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.04em;}
+  .sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,4vw,30px);letter-spacing:-.01em;margin:0;}
+  .rows{display:flex;flex-direction:column;}
+  .row{display:flex;gap:20px;padding:13px 0;border-top:1px solid var(--line);}
+  .row:first-child{border-top:none;}
+  .row .when{flex:0 0 150px;font-family:var(--display);font-weight:700;color:var(--muted);font-size:14px;line-height:1.5;}
+  .row .what{flex:1;}.row .what b{font-weight:700;}
+  .row .what span{display:block;color:var(--muted);font-size:14px;margin-top:1px;}
+  ul.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;}
+  ul.tags li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-size:14.5px;color:var(--ink-soft);}
+  ul.paperlist{list-style:none;padding:0;margin:0;}
+  ul.paperlist li{position:relative;padding:11px 0 11px 22px;border-top:1px solid var(--line);}
+  ul.paperlist li:first-child{border-top:none;}
+  ul.paperlist li::before{content:"";position:absolute;left:2px;top:18px;width:6px;height:6px;background:var(--accent);}
+  .pd-link{display:block;text-decoration:none;color:var(--ink);font-size:16px;line-height:1.6;transition:color .2s;}
+  a.pd-link{color:var(--accent-deep);}
+  a.pd-link:hover .pd-main{text-decoration:underline;text-underline-offset:3px;}
+  .pd-date{font-family:var(--display);font-weight:700;color:var(--accent-deep);white-space:nowrap;}
+  .pd-sep{color:var(--line);margin:0 8px;}
+  .pd-venue{color:var(--muted);}
+  .pd-role{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.06em;color:var(--accent-deep);border:1px solid var(--line);border-radius:6px;padding:0 6px;margin:0 4px;vertical-align:1px;}
+  .pd-off{color:var(--ink);cursor:default;}
+  .pd-off .pd-date{color:var(--muted);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;}
+  .bookcard{display:flex;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px;transition:transform .25s,box-shadow .25s;}
+  .bookcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px -16px rgba(28,25,21,.4);}
+  .bookcard .cover{flex:0 0 76px;height:108px;border-radius:8px;border:1px dashed var(--accent);background:#F2F2F2;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--accent-deep);font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;text-decoration:none;transition:filter .25s;}
+  a.cover:hover{filter:brightness(.92);}
+  .bookcard .cover img{width:100%;height:100%;object-fit:cover;}
+  .bookcard .meta{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .bookcard .meta .bt{font-weight:700;font-size:15px;line-height:1.35;color:var(--ink);}
+  .bookcard .meta .bsub{color:var(--muted);font-size:13px;margin-top:3px;flex:1;}
+  .buy{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;margin-top:10px;width:34px;height:34px;border-radius:50%;color:var(--accent-deep);text-decoration:none;background:#FCE7F1;border:1px solid #F6C9DE;transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s ease;}
+  .buy svg{width:17px;height:17px;flex:0 0 auto;}
+  a.buy:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px) scale(1.06);box-shadow:0 6px 14px -6px rgba(252,45,142,.7);}
+  .buy.off{color:#D9A7BE;background:#FAF1F5;border-style:dashed;border-color:#EED3DF;cursor:default;}
+  ul.simple{list-style:none;padding:0;margin:0;}
+  ul.simple li{padding:11px 0;border-top:1px solid var(--line);font-size:15.5px;}
+  ul.simple li:first-child{border-top:none;}
+  ul.simple li span{color:var(--muted);font-size:13.5px;}
+  a.bk-link{color:var(--accent-deep);text-decoration:none;transition:color .2s;}
+  a.bk-link:hover{text-decoration:underline;text-underline-offset:3px;}
+  footer{border-top:1px solid var(--line);padding:40px 0 64px;color:var(--muted);}
+  footer .fl{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
+  footer a{color:var(--ink-soft);text-decoration:none;font-size:14px;border-bottom:1px solid transparent;transition:.3s;}
+  footer a:hover{color:var(--accent-deep);border-color:var(--accent);}
+  footer .cr{font-size:12.5px;letter-spacing:.04em;}
+  .cform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+  .cform-row{display:flex;gap:14px;margin-bottom:14px;}
+  .cform-field{flex:1;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .cform-row .cform-field{margin-bottom:0;}
+  .clabel{font-size:13px;color:var(--ink-soft);font-weight:500;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:9px;background:#fff;padding:10px 12px;font-size:15px;font-family:var(--body);color:var(--ink);box-sizing:border-box;transition:border-color .2s;}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);}
+  .cform textarea{resize:vertical;line-height:1.6;}
+  .cform-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px;flex-wrap:wrap;}
+  .cform-note{font-size:12.5px;color:var(--muted);}
+  .cform-btn{background:var(--accent);color:#fff;border:none;border-radius:999px;padding:11px 26px;font-size:15px;font-weight:700;font-family:var(--display);cursor:pointer;transition:background .25s ease,transform .2s ease;}
+  .cform-btn:hover{background:var(--accent-deep);transform:translateY(-1px);}
+  .cform-btn:disabled{opacity:.6;cursor:default;transform:none;}
+  .cform-status{font-size:14px;margin:14px 0 0;font-weight:500;}
+  @media (max-width:560px){.cform-row{flex-direction:column;gap:0;}}
+  .ph{color:var(--accent-deep);}
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none;}html{scroll-behavior:auto;}}
+  @media (max-width:640px){nav.links{display:none;}.profile{flex-direction:column;gap:22px;}.portrait{flex:0 0 auto;}.portrait .ph-img{width:140px;height:170px;}}
+</style>
+</head>
+<body class="lang-en">
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#top">KIM SOOK HYANG</a>
+    <nav class="links">
+      <a href="#about"><span class="ko">소개</span><span class="en">About</span><span class="zh">简介</span></a>
+      <a href="#research"><span class="ko">연구</span><span class="en">Research</span><span class="zh">研究</span></a>
+      <a href="#pubs"><span class="ko">논문</span><span class="en">Articles</span><span class="zh">论文</span></a>
+      <a href="#books"><span class="ko">저·역서</span><span class="en">Books</span><span class="zh">著译</span></a>
+      <a href="#teaching"><span class="ko">강의</span><span class="en">Teaching</span><span class="zh">教学</span></a>
+      <a href="#contact"><span class="ko">쪽지</span><span class="en">Contact</span><span class="zh">留言</span></a>
+    </nav>
+    <div class="lang">
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button><span class="sep">/</span><button id="btn-ko" onclick="setLang('ko')">KO</button><span class="sep">/</span><button id="btn-zh" onclick="setLang('zh')">中文</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="profile">
+    <div class="portrait reveal d1">
+      <div class="ph-img"><img src="1.png" alt="Kim Sook Hyang" style="width:100%;height:100%;object-fit:cover;border-radius:14px"></div>
+    </div>
+    <div class="pinfo reveal d2">
+      <h1><span class="en">Kim Sook Hyang <span class="hanja">金淑香</span></span><span class="ko">김숙향 <span class="hanja">金淑香</span></span><span class="zh">金淑香 <span class="hanja">Kim Sook Hyang</span></span></h1>
+      <p class="role"><span class="ko">학술연구교수 · 중국 명청문학</span><span class="en">Academic Research Professor · Ming–Qing Literature</span><span class="zh">学术研究教授 ｜ 明清文学</span></p>
+      <p class="affil"><span class="ko">고려대학교 중국학연구소 · 한국연구재단 학술연구교수(A형, 2023–2028)</span><span class="en">Center for Chinese Studies, Korea University · NRF Academic Research Professor (Type A, 2023–2028)</span><span class="zh">高丽大学中国学研究所 ｜ 韩国研究财团学术研究教授（A类，2023–2028）</span></p>
+      <div class="iconrow">
+        <a class="ph" href="mailto:sufaye@hanmail.net" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a class="ph" href="https://orcid.org/0009-0005-1022-7027" title="ORCID" aria-label="ORCID" target="_blank" rel="me noopener noreferrer">ORCID</a>
+        <a class="ph" href="https://scholar.google.com/citations?hl=ko&user=bPdEmTUAAAAJ" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v3.3c0 1.6 3.1 3.5 7 3.5s7-1.9 7-3.5v-3.3l-7 3.8z"/></svg></a>
+        <a class="ph" href="https://github.com/sookhyangkim" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+        <a class="ph" href="#" title="Home" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21C9.5 18.5 8.2 15.3 8.2 12S9.5 5.5 12 3Z"/></svg></a>
+      </div>
+      <div class="bio">
+        <p class="ko">명청(明淸) 시대 소품(小品)과 소화(笑話)처럼 개성적이고 단편적인 문학과 비평을 연구합니다. 아속(雅俗) 문학의 교차 양상과 인간의 본성에 관한 비평에 관심이 많습니다.</p>
+        <p class="ko">최근에는 디지털인문학 방법을 활용해 소화 코퍼스를 구축하고 있으며, 이를 다양한 디지털 콘텐츠로 재가공하여 고전의 웃음을 현대에 소개하는 작업을 이어가고 있습니다.</p>
+        <p class="en">I research individualistic and short-form literature and criticism from the Ming and Qing dynasties, focusing particularly on xiaopin and xiaohua. My academic interests lie in exploring the dynamic intersections between elegant (ya) and vulgar (su) literature, as well as criticism concerning human nature.</p>
+        <p class="en">Recently, I have been utilizing digital humanities methodologies to build a comprehensive xiaohua corpus. Through this project, I adapt and recreate classical humor into various digital formats, bringing the wit and laughter of the past to today's audience.</p>
+        <p class="zh">我主要研究明清小品、笑话等个性鲜明的短篇文学与文学批评，尤其关注雅俗文学的交融，以及有关人性的批评。</p>
+        <p class="zh">近年来，我运用数字人文方法建设笑话语料库，并将其转化为多种形式的数字内容，让古典的笑声走进当代读者。</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="sec-head"><span class="num">01</span><h2><span class="ko">관심 연구</span><span class="en">Research Interests</span><span class="zh">研究兴趣</span></h2></div>
+    <ul class="tags" id="interests"></ul>
+  </section>
+
+  <section id="research">
+    <div class="sec-head"><span class="num">02</span><h2><span class="ko">학력</span><span class="en">Education</span><span class="zh">学历</span></h2></div>
+    <div class="rows" id="education"></div>
+    <div class="sec-head" style="margin-top:40px"><span class="num">03</span><h2><span class="ko">경력</span><span class="en">Career</span><span class="zh">经历</span></h2></div>
+    <div class="rows" id="career"></div>
+  </section>
+
+  <section id="pubs">
+    <div class="sec-head"><span class="num">04</span><h2><span class="ko">학술 논문</span><span class="en">Journal Articles</span><span class="zh">学术论文</span></h2></div>
+    <div id="papers"></div>
+  </section>
+
+  <section id="books">
+    <div class="sec-head"><span class="num">05</span><h2><span class="ko">역서</span><span class="en">Translations</span><span class="zh">译著</span></h2></div>
+    <p style="color:var(--muted);font-size:14px;margin:-6px 0 18px">
+      <span class="ko">표지나 아이콘을 누르면 온라인 서점으로 이동합니다.</span>
+      <span class="en">Click a cover or icon to open its Kyobo page.</span>
+      <span class="zh">点击封面或图标，可前往网上书店（教保文库）页面。</span>
+    </p>
+    <div class="grid" id="translations"></div>
+    <div class="sec-head" style="margin-top:40px"><span class="num">06</span><h2><span class="ko">저서</span><span class="en">Authored Books</span><span class="zh">著作</span></h2></div>
+    <ul class="simple" id="authored"></ul>
+  </section>
+
+  <section id="teaching">
+    <div class="sec-head"><span class="num">07</span><h2><span class="ko">강의</span><span class="en">Teaching</span><span class="zh">教学</span></h2></div>
+    <ul class="simple">
+      <li><b><span class="ko">중국 인문 텍스트와 디지털 큐레이션</span><span class="en">Chinese Humanities Texts &amp; Digital Curation</span><span class="zh">中国人文文本与数字策展</span></b> <span class="ko">· 고전 텍스트를 디지털 방법으로 큐레이팅하는 융복합 강의</span><span class="en">· An interdisciplinary course on curating classical texts with digital methods</span><span class="zh">—— 运用数字方法策展古典文本的跨学科课程</span></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head"><span class="num">08</span><h2><span class="ko">쪽지 보내기</span><span class="en">Send a Note</span><span class="zh">给我留言</span></h2></div>
+    <p style="color:var(--muted);font-size:14px;margin:-6px 0 18px">
+      <span class="ko">남기신 메시지는 공개되지 않고 김숙향에게만 비공개로 전달됩니다.</span>
+      <span class="en">Your message stays private and is delivered only to Kim Sook Hyang.</span>
+      <span class="zh">您的留言不会公开，仅私下转交金淑香本人。</span>
+    </p>
+    <form id="contact-form" class="cform" action="https://formspree.io/f/xzdqdyby" method="POST">
+      <input type="hidden" name="_subject" value="사이트 쪽지 · Website note">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="cform-row">
+        <label class="cform-field">
+          <span class="clabel"><span class="ko">이름</span><span class="en">Name</span><span class="zh">姓名</span></span>
+          <input type="text" name="name" required>
+        </label>
+        <label class="cform-field">
+          <span class="clabel"><span class="ko">답장받을 이메일</span><span class="en">Your email</span><span class="zh">您的邮箱</span></span>
+          <input type="email" name="email" required>
+        </label>
+      </div>
+      <label class="cform-field">
+        <span class="clabel"><span class="ko">메시지</span><span class="en">Message</span><span class="zh">留言内容</span></span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <div class="cform-foot">
+        <span class="cform-note"><span class="ko">비공개 · 사이트에 표시되지 않음</span><span class="en">Private · never shown on the site</span><span class="zh">私密留言，不会显示在网站上</span></span>
+        <button type="submit" class="cform-btn"><span class="ko">보내기</span><span class="en">Send</span><span class="zh">发送</span></button>
+      </div>
+      <p id="cform-status" class="cform-status" hidden></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">
+      <a class="ph" href="mailto:sufaye@hanmail.net"><span class="ko">이메일</span><span class="en">Email</span><span class="zh">电子邮件</span></a>
+      <a class="ph" href="https://orcid.org/0009-0005-1022-7027" target="_blank" rel="me noopener noreferrer">ORCID</a>
+      <a class="ph" href="https://scholar.google.com/citations?hl=ko&user=bPdEmTUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a class="ph" href="https://github.com/sookhyangkim" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <div class="cr">© <span id="yr"></span> 김숙향 (金淑香).</div>
+  </div>
+</footer>
+
+<script>
+/* ===== 데이터 ===== */
+const interests = {
+  ko:["명청 소화(笑話) 문헌","풍몽룡·장대·김성탄의 편집·비평","雅/俗 문화 위계와 장르 이론","디지털인문학 · 코퍼스 구축","AI 활용 문학 연구","콘텐츠 기획 및 제작"],
+  en:["Ming–Qing xiaohua","Feng Menglong · Zhang Dai · Jin Shengtan","Ya/su hierarchy & genre theory","Digital Humanities · corpus building","AI-assisted literary research","Content curation & production"],
+  zh:["明清笑话文献","冯梦龙、张岱、金圣叹的编纂与批评","雅俗文化层级与文体理论","数字人文与语料库建设","AI辅助文学研究","内容策划与制作"]
+};
+const education = {
+  ko:[
+    ["2012.06","<b>박사</b> 復旦大學(중국) 中國古代文學","학위논문 「金聖嘆古文批評研究」 · 지도교수 黃霖"],
+    ["2009.03","<b>박사 수료</b> 고려대학교 중어중문학과",""],
+    ["2005.06","<b>석사</b> 고려대학교 중어중문학과","張岱『陶庵夢憶』연구 · 지도교수 이재훈"],
+    ["2002.02","<b>학사</b> 순천향대학교 중어중문과",""]
+  ],
+  en:[
+    ["2012.06","<b>Ph.D.</b> Classical Chinese Literature, Fudan University, China","Dissertation: A Study of Jin Shengtan's Classical Prose Criticism · Adviser: Huang Lin"],
+    ["2009.03","<b>Ph.D. Coursework</b> Chinese Language & Literature, Korea University",""],
+    ["2005.06","<b>M.A.</b> Chinese Language & Literature, Korea University","Thesis on Zhang Dai's Tao'an Mengyi · Adviser: Lee Jae-hoon"],
+    ["2002.02","<b>B.A.</b> Chinese Language & Literature, Soonchunhyang University",""]
+  ],
+  zh:[
+    ["2012.06","<b>博士</b> 复旦大学 中国古代文学","学位论文《金聖嘆古文批評研究》，导师：黄霖"],
+    ["2009.03","<b>博士课程修满</b> 高丽大学 中语中文系",""],
+    ["2005.06","<b>硕士</b> 高丽大学 中语中文系","硕士论文：张岱《陶庵梦忆》研究，导师：Lee Jae-hoon"],
+    ["2002.02","<b>学士</b> 顺天乡大学 中语中文系",""]
+  ]
+};
+const career = {
+  ko:[
+    ["2023.07 – 현재","<b>연구교수</b> 고려대학교 중국학연구소",""],
+    ["2022.11 – 2023.06","<b>전임연구원</b> 가톨릭대학교 인간학연구소",""],
+    ["2019.09 – 2023.02","<b>강사</b> 가천대학교",""],
+    ["2018.03 – 2019.02","<b>연구교수</b> 고려대학교 중국학연구소",""],
+    ["2016.09 – 2017.08","<b>초빙교수</b> 숭실대학교",""],
+    ["2013.03 – 2023.02","<b>강사</b> 고려대학교",""],
+    ["2012.09 – 2013.06","<b>강사</b> 순천향대학교",""]
+  ],
+  en:[
+    ["2023.07 – Present","<b>Research Professor</b> Center for Chinese Studies, Korea University",""],
+    ["2022.11 – 2023.06","<b>Full-time Researcher</b> Catholic University of Korea",""],
+    ["2019.09 – 2023.02","<b>Lecturer</b> Gachon University",""],
+    ["2018.03 – 2019.02","<b>Research Professor</b> Center for Chinese Studies, Korea University",""],
+    ["2016.09 – 2017.08","<b>Visiting Professor</b> Soongsil University",""],
+    ["2013.03 – 2023.02","<b>Lecturer</b> Korea University",""],
+    ["2012.09 – 2013.06","<b>Lecturer</b> Soonchunhyang University",""]
+  ],
+  zh:[
+    ["2023.07 – 至今","<b>研究教授</b> 高丽大学 中国学研究所",""],
+    ["2022.11 – 2023.06","<b>专任研究员</b> 韩国天主教大学 人间学研究所",""],
+    ["2019.09 – 2023.02","<b>讲师</b> 嘉泉大学",""],
+    ["2018.03 – 2019.02","<b>研究教授</b> 高丽大学 中国学研究所",""],
+    ["2016.09 – 2017.08","<b>客座教授</b> 崇实大学",""],
+    ["2013.03 – 2023.02","<b>讲师</b> 高丽大学",""],
+    ["2012.09 – 2013.06","<b>讲师</b> 顺天乡大学",""]
+  ]
+};
+// 학술지 중국어 표기 (한국어 학술지명 → 중국어)
+const journalZh = {
+  "열린정신 인문학 연구":"開放精神人文學研究","인간연구":"人間研究","중국학논총":"中國學論叢","沽山中國學報":"沽山中國學報",
+  "중국문화연구":"中國文化研究","중어중문학":"中語中文學","순천향 인문과학논총":"順天鄉人文科學論叢","한국게임학회 논문지":"韓國遊戲學會論文誌",
+  "중국어문논총":"中國語文論叢","중국소설논총":"中國小說論叢","중국어문논역총간":"中國語文論譯叢刊"
+};
+const roleLabel = {"단독":{en:"Sole",zh:"独著"},"공동":{en:"Co-author",zh:"合著"},"공동(제1)":{en:"First author",zh:"第一作者"}};
+// [제목ko, 제목en, 게재지ko, 게재지en, "권면", "연.월.", 역할, 링크("#"=비움), 제목zh]
+const papers = [
+  ["馮夢龍 ≪笑府≫ 形體部의 신체와 웃음 ― 핵심도(Keyness) 분석과 ‘몸의 세 경계’ 정독을 결합하여","Body and Laughter in the Xingti Section of Feng Menglong’s Xiaofu: Combining Keyness Analysis with a Close Reading of the “Three Boundaries of the Body”","중국학논총","Journal of Chinese Studies","93","2026.09.","단독","#","馮夢龍《笑府》形體部中的身體與笑——結合關鍵度（Keyness）分析與「身體的三重邊界」細讀"],
+  ["明末 笑話書 탐색 ― 趙南星 『笑贊』의 ‘贊’ 문체를 중심으로","An Exploration of Late Ming Xiaohua Books: The Zan Style in Zhao Nanxing’s Xiaozan","중어중문학","Korea Journal of Chinese Language and Literature","104, 3–29","2026.06.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003354133","明末笑話書探索——以趙南星《笑贊》的「贊」體為中心"],
+  ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","Translation and Annotation of “Tanxian 1” in Chibeioutan, Juan 2 (1)","열린정신 인문학 연구","Wonkwang Journal of Humanities","27(1), 69–96","2026.04.","공동","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003335882","《池北偶談》卷二〈談獻一〉譯注（一）"],
+  ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","Coexistence of Heterogeneity and System: Style and Editorial Structure in the Second Collection of Shanzhong Yixihua","인간연구","Journal of Human Studies","58, 179–211","2026.04.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003331376","異質與體系的共存：《山中一夕話》下集的文體與編次考察"],
+  ["淸末 文獻笑話 탐색 ─ ≪笑笑錄≫의 문헌적 가치와 소화 전승 양상","An Exploration of Late Qing Literary Xiaohua: The Bibliographical Value and Transmission Patterns of Xiaoxiaolu","중국학논총","Journal of Chinese Studies","91, 87–116","2026.03.","단독","https://doi.org/10.26585/chlab.2026..91.004","清末文獻笑話探索——《笑笑錄》的文獻價值與笑話傳承樣態"],
+  ["디지털 시대 인성교육을 위한 明淸 笑話의 활용","The Use of Ming-Qing Xiaohua for Character Education in the Digital Age","沽山中國學報","Gusan Journal of Chinese Studies","15, 203–235","2026.03.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003324381","數字時代明清笑話在品格教育中的運用"],
+  ["팟캐스트를 활용한 明淸笑話의 인성교육 콘텐츠 제작 연구","A Study on the Development of Podcast-Based Character Education Content Utilizing Ming-Qing Xiaohua","중국문화연구","The Journal of Chinese Cultural Studies","72, 21–42","2026.05.","단독","https://doi.org/10.18212/cccs.2026..72.002","基於播客的明清笑話品格教育內容製作研究"],
+  ["明末 文獻笑話 탐색 ― 李贄 ≪山中一夕話≫ 笑話에 반영된 文人 趣向","An Exploration of Wenxian Xiaohua in the Late Ming: The Literati’s Aesthetic Preferences in Li Zhi’s Shanzhong Yixihua","중국학논총","Journal of Chinese Studies","88, 31–61","2025.06.","단독","https://doi.org/10.26585/chlab.2025..88.002","明末文獻笑話探索——李贄《山中一夕話》笑話所反映的文人趣向"],
+  ["明末 文獻笑話 탐색: 張岱 『快園道古』 속 소화적 성격 고찰","An Exploration of Wenxian Xiaohua in the Late Ming: The Xiaohua Characteristics of Zhang Dai’s Kuaiyuan Daogu","중어중문학","Korea Journal of Chinese Language and Literature","100, 35–66","2025.06.","단독","https://doi.org/10.46612/kjcll.2025.06.100.35","明末文獻笑話探索：張岱《快園道古》的笑話性質考察"],
+  ["경계의 해체와 재구성: 장대(張岱)의 『서호몽심(西湖夢尋)』에 나타난 복합적 문학 구조와 그 의미","The Dissolution and Reconstruction of Boundaries: The Complex Literary Structure in Zhang Dai’s Xihu Mengxun","순천향 인문과학논총","Soonchunhyang Journal of Humanities","43(4), 35–60","2024.12.","단독","https://doi.org/10.35222/IHSU.2024.43.4.35","邊界的消解與重構：張岱《西湖夢尋》的複合文學結構及其意義"],
+  ["생성형 AI 챗봇을 활용한 문학연구의 가능성과 한계 ― ChatGPT-4.o 기반 장대 챗봇 '대화(岱話)'","Possibilities and Limitations of Literary Research Using Generative AI Chatbots: ‘Daihua’, a Zhang Dai Chatbot Based on ChatGPT-4.o","중국학논총","Journal of Chinese Studies","85, 289–322","2024.09.","단독","https://doi.org/10.26585/chlab.2024..85.010","生成式AI聊天機器人應用於文學研究的可能與局限——基於ChatGPT-4.o的張岱聊天機器人「岱話」"],
+  ["메타버스 기반 대학 비교과 학습환경의 특성 연구 : C대학 'CUK 북 챌린지'","Characteristics of a Metaverse-Based Extracurricular Learning Environment: C University’s ‘CUK Book Challenge’","한국게임학회 논문지","Journal of Korea Game Society","23(4), 81–92","2023.08.","공동","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002988694","基於元宇宙的大學課外學習環境特徵研究：以C大學「CUK讀書挑戰」為例"],
+  ["明末 民間笑話書 ≪笑府≫ 속 지식인 연구Ⅰ ― 〈腐流〉편","A Study on Intellectuals in the Late Ming Xiaohua Book Xiaofu I: The 〈Fuliu〉 Chapter","중국학논총","Journal of Chinese Studies","80, 61–85","2023.06.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002973776","明末民間笑話書《笑府》中的知識分子研究Ⅰ——〈腐流〉篇"],
+  ["메타버스로 체험하는 문학 ― 중국 고전산문 수업 설계","Experiencing Literature in the Metaverse: Designing a Chinese Classical Prose Class","순천향 인문과학논총","Soonchunhyang Journal of Humanities","42(1), 121–145","2023.03.","단독","https://scholar.kyobobook.co.kr/article/detail/4010041412852","在元宇宙中體驗文學——中國古典散文課程設計"],
+  ["메타버스 플랫폼 젭(ZEP)을 활용한 모둠 활동 수업 방안 연구","A Study on Group Activity Classes Using the Metaverse Platform ZEP","중국어문논총","Journal of Chinese Language and Literature","111, 421–446","2022.10.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002890889","利用元宇宙平台ZEP的小組活動教學方案研究"],
+  ["明淸 笑話 중 文獻笑話의 의미 재탐색 ― ≪明淸笑話十種≫","Redefining the Meaning of Wenxian Xiaohua in Ming-Qing Xiaohua: Focused on Mingqing Xiaohua Shizhong","중국학논총","Journal of Chinese Studies","77, 77–105","2022.09.","단독","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002881875","明清笑話中文獻笑話意義的再探索——以《明清笑話十種》為中心"],
+  ["明末 文獻笑話의 웹툰 콘텐츠 제작 연구 ― 馮夢龍 ≪古今譚槪≫〈問牛〉","Research on Webtoon Content Creation of Wenxian Xiaohua in the Late Ming: Feng Menglong’s Gujin Tangai","중국소설논총","The Journal of the Research of Chinese Novels","67, 107–126","2022.08.","단독","https://doi.org/10.17004/jrcn.2022..67.005","明末文獻笑話的網絡漫畫內容製作研究——以馮夢龍《古今譚概》〈問牛〉為例"],
+  ["中國 儒家 經典 속 '웃음'의 의미 ― 笑話라는 장르의 이해","The Meaning of ‘Laughter’ in Chinese Confucian Classics: Understanding the Genre of Xiaohua","중국학논총","Journal of Chinese Studies","76, 123–151","2022.06.","단독","https://doi.org/10.26585/chlab.2022..76.006","中國儒家經典中「笑」的意義——理解笑話這一文體"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (6)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (6)","중국어문논총","Journal of Chinese Language and Literature","107, 355–381","2021.10.","공동","https://doi.org/10.26586/chls.2021..107.014","《池北偶談》卷一〈談故一〉譯注（六）"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (5)","A Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (5)","중국학논총","Journal of Chinese Studies","72, 279–304","2021.06.","공동","https://doi.org/10.26585/chlab.2021..72.012","《池北偶談》卷一〈談故一〉譯注（五）"],
+  ["≪古今譚槪≫〈迂腐〉의 飜譯과 註解 (2)","An Annotated Translation of Gujin Tangai·Yufu (2)","중국어문논총","Journal of Chinese Language and Literature","103, 279–304","2021.02.","단독","https://doi.org/10.26586/chls.2021..103.010","《古今譚概》〈迂腐〉譯注（二）"],
+  ["明末 서양 과학서 번역 활동의 의의 ― 徐光啓(1562–1633)","The Significance of Western Science Book Translation in the Late Ming: Focus on Xu Guangqi","중국학논총","Journal of Chinese Studies","70, 135–161","2020.12.","단독","#","明末西方科學書籍翻譯活動的意義——以徐光啓（1562–1633）為中心"],
+  ["馮夢龍의 ≪古今譚槪≫ 一考","A Study on Feng Menglong’s Gujin Tangai","중국어문논총","Journal of Chinese Language and Literature","101, 127–152","2020.10.","단독","#","馮夢龍《古今譚概》考"],
+  ["≪古今譚槪≫〈迂腐部〉의 飜譯과 註解","An Annotated Translation of Gujin Tangai·Yufu","중국학논총","Journal of Chinese Studies","69, 337–359","2020.09.","단독","#","《古今譚概》〈迂腐部〉譯注"],
+  ["淸初 批評家 孫琮의 評語 分析 ― ≪山曉閣選唐大家柳柳州全集≫","An Analysis of Sun Cong’s Comments in the Early Qing: Shanxiaoge Xuan Tang Dajia Liu Liuzhou Quanji","중국어문논총","Journal of Chinese Language and Literature","98, 91–116","2020.04.","단독","#","清初批評家孫琮評語分析——以《山曉閣選唐大家柳柳州全集》為中心"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (4)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (4)","중국어문논총","Journal of Chinese Language and Literature","95, 381–407","2019.10.","공동(제1)","#","《池北偶談》卷一〈談故一〉譯注（四）"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (3)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (3)","중국학논총","Journal of Chinese Studies","64, 299–324","2019.06.","공동","#","《池北偶談》卷一〈談故一〉譯注（三）"],
+  ["표절과 활용의 경계 ― ≪古文觀止≫에 반영된 前代 選文批評의 의의","Boundaries of Plagiarism and Utilization: The Significance of Former Selected-Works Criticism in Guwen Guanzhi","중국어문논총","Journal of Chinese Language and Literature","92, 115–143","2019.04.","단독","https://doi.org/10.26586/chls.2019..92.005","抄襲與利用的邊界——《古文觀止》所反映的前代選文批評之意義"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (2)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (2)","중국어문논역총간","Journal of Chinese Language and Literature Translation","44, 403–431","2019.01.","공동","https://doi.org/10.35822/JCLLT.2019.01.44.403","《池北偶談》卷一〈談故一〉譯注（二）"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (2) ― 卷2","Translations and Annotations of Xihu Mengxun (2): Part 2","중국학논총","Journal of Chinese Studies","60, 203–230","2018.06.","단독","https://doi.org/10.26585/chlab.2018..60.010","《西湖夢尋》注釋與翻譯（二）——卷二"],
+  ["≪池北偶談≫ 卷1 〈談故 1〉의 번역과 주해 (1)","Translation and Annotation of “Tangu 1” in Chibeioutan, Juan One (1)","중국어문논총","Journal of Chinese Language and Literature","87, 263–286","2018.06.","공동","#","《池北偶談》卷一〈談故一〉譯注（一）"],
+  ["≪西湖夢尋≫의 註釋과 飜譯 (1)","Translations and Annotations of Xihu Mengxun (1)","중국학논총","Journal of Chinese Studies","58, 467–492","2017.12.","단독","#","《西湖夢尋》注釋與翻譯（一）"],
+  ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","Jin Shengtan’s Text Processing in the Anthology of Classical Chinese Essays","중국학논총","The Journal of Sinology","40, 109–132","2013.12.","단독","#","金聖嘆《天下才子必讀書》的原文加工樣態"],
+];
+// [제목ko, 제목en, "원저자·출판사 ko", "...en", 연도, 역할ko, 역할en, 표지, 링크, 제목zh, "원저자·출판사 zh", 역할zh]
+const translations = [
+  ["서호몽심 (西湖夢尋)","Xihu Mengxun","역락","Yeokrak",2024,"","","b1.jpg","https://product.kyobobook.co.kr/detail/S000214815468","《西湖夢尋》韓譯本","張岱，Yeokrak",""],
+  ["池北偶談: 談故 1","Chibeioutan: Tangu 1","王士禛 · 퍼플","Wang Shizhen · Purple",2024,"공역","Co-trans.","","#","《池北偶談·談故一》韓譯本","王士禛，Purple","合译"],
+  ["도암몽억 (陶庵夢憶)","Tao'an Mengyi","張岱 · 세창출판사","Zhang Dai · Sechang",2020,"","","b2.jpg","https://product.kyobobook.co.kr/detail/S000001303469","《陶庵夢憶》韓譯本","張岱，Sechang",""],
+  ["자수 (刺繡)","Embroidery","류옹 · 한국학술정보","Liu Weng · KSI",2016,"","","xiu.jpg","https://product.kyobobook.co.kr/detail/S000000509587","《刺繡》韓譯本","",""],
+  ["난징함락과 대학살 1–4","The Fall of Nanjing 1–4","저우얼푸 · 한국학술정보","Zhou Erfu · KSI",2015,"","","nan.jpg","https://product.kyobobook.co.kr/detail/S000000509538","周而復《南京的陷落》韓譯本 1–4","KSI",""],
+  ["중국의 전통장신구 上·下","Traditional Chinese Ornaments I·II","탕쉬샹·왕진화 · 한국학술정보","Tang Xuxiang · Wang Jinhua · KSI",2015,"","","jiang.jpg","https://product.kyobobook.co.kr/detail/S000000509554","《中國傳統首飾》韓譯本 上下","",""],
+  ["(똑똑한 리더의) 맹자지혜","Mencius' Wisdom","천신후이 · 북메이드","Chen Xinhui · Bookmade",2011,"","","meng.jpg","https://product.kyobobook.co.kr/detail/S000001597137","《孟子的智慧》韓譯本","",""],
+  ["제왕 (帝王)","The Emperor","우한 · 살림출판사","Wu Han · Sallim",2010,"","","wang.jpg","https://product.kyobobook.co.kr/detail/S000000721230","《帝王》韓譯本","吳晗，Sallim",""],
+  ["대여행가 (大旅行家)","The Great Traveler","우한 · 살림출판사","Wu Han · Sallim",2009,"","","lvxing.jpg","https://product.kyobobook.co.kr/detail/S000000721031","《大旅行家》韓譯本","吳晗，Sallim",""],
+  ["명장 (名將)","The Great General","우한 · 살림출판사","Wu Han · Sallim",2008,"","","ming.jpg","https://product.kyobobook.co.kr/detail/S000000720957","《名將》韓譯本","吳晗，Sallim",""]
+];
+// [제목ko, 제목en, "출판사·연도 ko", "...en", 링크, 제목zh, "출판사·연도 zh"]
+const authored = [
+  ["지속가능한 미래, 이제부터 써 내려갈 이야기 (공저)","A Sustainable Future (co-authored)","북코리 · 2025","Bookory · 2025","https://product.kyobobook.co.kr/detail/S000217447134","《可持續的未來：從現在開始書寫的故事》（合著）","Bookory，2025"],
+  ["관광중국어 2 (공저)","Tourism Chinese 2 (co-authored)","백산 · 2020","Baeksan · 2020","https://product.kyobobook.co.kr/detail/S000001839022","《觀光漢語2》（合著）","Baeksan，2020"],
+  ["관광중국어 1 (공저)","Tourism Chinese 1 (co-authored)","백산 · 2020","Baeksan · 2020","https://product.kyobobook.co.kr/detail/S000001839021","《觀光漢語1》（合著）","Baeksan，2020"],
+  ["(NCS 기반) 호텔실무 중국어회화 (공저)","Hotel-Practice Chinese Conversation (co-authored)","백산출판사 · 2017","Baeksan · 2017","https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=155353281","《酒店實務漢語會話（基於NCS）》（合著）","Baeksan，2017"]
+];
+/* ===== 데이터 끝 ===== */
+
+const LANGS = ['en','ko','zh'];
+const TITLES = {en:'Kim Sook Hyang (金淑香) · Academic Archive', ko:'김숙향 (金淑香) · 학술 아카이브', zh:'金淑香 · 学术档案'};
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const curLang = () => LANGS.find(l => document.body.classList.contains('lang-'+l)) || 'en';
+function render(){
+  const lang = curLang();
+  document.getElementById('interests').innerHTML = interests[lang].map(t=>`<li>${esc(t)}</li>`).join('');
+  const rowsHtml = arr => arr.map(([w,what,sub])=>
+    `<div class="row"><div class="when">${esc(w)}</div><div class="what">${what}${sub?`<span>${esc(sub)}</span>`:''}</div></div>`).join('');
+  document.getElementById('education').innerHTML = rowsHtml(education[lang]);
+  document.getElementById('career').innerHTML = rowsHtml(career[lang]);
+
+  const wrapT = {ko:['「','」'], en:['',''], zh:['','']}[lang];
+  const wrapV = {ko:['『','』'], en:['',''], zh:['《','》']}[lang];
+  const vsep  = lang==='zh' ? '，' : ', ';
+  const itemHtml = ([ko,en,jko,jen,vol,date,role,link,zh])=>{
+    const title = (lang==='en' && en) ? en : (lang==='zh' && zh) ? zh : ko;
+    const venue = (lang==='en' && jen) ? jen : (lang==='zh' && journalZh[jko]) ? journalZh[jko] : jko;
+    const r = (lang!=='ko' && roleLabel[role]) ? roleLabel[role][lang] : role;
+    const inner = `<span class="pd-date">${esc(date)}</span>`
+                + `<span class="pd-sep">/</span>`
+                + `<span class="pd-main">${wrapT[0]}${esc(title)}${wrapT[1]}<span class="pd-role">${esc(r)}</span>`
+                + `<span class="pd-venue">${vsep}${wrapV[0]}${esc(venue)}${wrapV[1]} ${esc(vol)}</span></span>`;
+    return (link && link!=='#')
+      ? `<li><a class="pd-link" href="${link}" target="_blank" rel="noopener">${inner}</a></li>`
+      : `<li><span class="pd-link pd-off">${inner}</span></li>`;
+  };
+  document.getElementById('papers').innerHTML =
+    `<ul class="paperlist">${papers.slice().sort((a,b)=>b[5].localeCompare(a[5])).map(itemHtml).join('')}</ul>`;
+
+  document.getElementById('translations').innerHTML = translations.map(([ko,en,subko,suben,y,roleko,roleen,img,link,zh,subzh,rolezh])=>{
+    const t = (lang==='en' && en) ? en : (lang==='zh' && zh) ? zh : ko;
+    const sub = (lang==='en') ? suben : (lang==='zh') ? (subzh || suben) : subko;
+    const role = (lang==='en') ? roleen : (lang==='zh') ? rolezh : roleko;
+    const href = (link && link!=='#') ? link : '#';
+    const linked = href!=='#';
+    const cover = img ? `<img src="${img}" alt="${esc(t)}">` : `<span>${{en:'COVER',ko:'［표지］',zh:'［封面］'}[lang]}</span>`;
+    const meta = [sub, y, role].filter(x=>x!==undefined && x!==null && String(x).trim()!=='').map(esc).join(' · ');
+    const coverTag = linked
+      ? `<a class="cover" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)}">${cover}</a>`
+      : `<span class="cover">${cover}</span>`;
+    const icon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5.2 8.4 4.7 6 4.8a1 1 0 0 0-1 1v10.4a1 1 0 0 0 1 1c2.3-.1 4.4.4 6 1.6 1.6-1.2 3.7-1.7 6-1.6a1 1 0 0 0 1-1V5.8a1 1 0 0 0-1-1c-2.4-.1-4.5.4-6 1.7Z"/><path d="M12 6.5V19"/></svg>`;
+    const buyBtn = linked
+      ? `<a class="buy" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)}">${icon}</a>`
+      : `<span class="buy off">${icon}</span>`;
+    return `<div class="bookcard">${coverTag}<div class="meta"><div class="bt">${esc(t)}</div><div class="bsub">${meta}</div>${buyBtn}</div></div>`;
+  }).join('');
+
+  document.getElementById('authored').innerHTML = authored.map(([ko,en,subko,suben,link,zh,subzh])=>{
+    const t = (lang==='en' && en) ? en : (lang==='zh' && zh) ? zh : ko;
+    const sub = (lang==='en') ? suben : (lang==='zh') ? (subzh || suben) : subko;
+    const title = (link && link!=='#')
+      ? `<a class="bk-link" href="${link}" target="_blank" rel="noopener"><b>${esc(t)}</b></a>`
+      : `<b>${esc(t)}</b>`;
+    return `<li>${title} <span>${esc(sub)}</span></li>`;
+  }).join('');
+}
+function setLang(l){
+  if(!LANGS.includes(l)) l='en';
+  LANGS.forEach(x=>{
+    document.body.classList.toggle('lang-'+x, x===l);
+    const b=document.getElementById('btn-'+x); if(b) b.classList.toggle('active', x===l);
+  });
+  document.documentElement.lang = (l==='zh') ? 'zh-CN' : l;
+  document.title = TITLES[l];
+  try{
+    const u = new URL(location.href);
+    if(l==='en') u.searchParams.delete('lang'); else u.searchParams.set('lang', l);
+    history.replaceState(null,'',u);
+  }catch(_){}
+  render();
+  applyContactLang(l);
+}
+function applyContactLang(l){
+  const f = document.getElementById('contact-form');
+  if(!f) return;
+  const ph = {
+    name:{ko:'성함 또는 소속',en:'Your name or affiliation',zh:'您的姓名或单位'},
+    email:{ko:'you@example.com',en:'you@example.com',zh:'you@example.com'},
+    message:{ko:'전하고 싶은 내용을 자유롭게 적어 주세요.',en:'Write your message here.',zh:'请在此写下您想说的话。'}
+  };
+  for(const k in ph){ const el=f.querySelector('[name='+k+']'); if(el) el.placeholder=ph[k][l]; }
+}
+document.getElementById('yr').textContent=new Date().getFullYear();
+setLang((new URLSearchParams(location.search).get('lang')||'en').toLowerCase());
+
+(function(){
+  const cform = document.getElementById('contact-form');
+  if(!cform) return;
+  const cstatus = document.getElementById('cform-status');
+  const msg = {
+    ok:{ko:'메시지가 전달되었습니다. 감사합니다!',en:'Thank you — your note has been sent.',zh:'留言已发送，谢谢！'},
+    err:{ko:'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.',en:'Something went wrong. Please try again.',zh:'发送失败，请稍后再试。'}
+  };
+  function show(type){
+    const l = curLang();
+    cstatus.hidden = false;
+    cstatus.textContent = msg[type][l];
+    cstatus.style.color = (type==='ok') ? 'var(--accent-deep)' : '#C0392B';
+  }
+  cform.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = cform.querySelector('.cform-btn');
+    btn.disabled = true;
+    try{
+      const res = await fetch(cform.action,{
+        method:'POST',
+        body:new FormData(cform),
+        headers:{'Accept':'application/json'}
+      });
+      if(res.ok){ cform.reset(); show('ok'); }
+      else { show('err'); }
+    }catch(_){ show('err'); }
+    finally{ btn.disabled = false; }
+  });
+})();
+</script>
+</body>
+</html>
