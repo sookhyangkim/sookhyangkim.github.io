@@ -80,6 +80,7 @@
   .bookcard .cover img{width:100%;height:100%;object-fit:cover;}
   .bookcard .meta{flex:1;min-width:0;display:flex;flex-direction:column;}
   .bookcard .meta .bt{font-weight:700;font-size:15px;line-height:1.35;color:var(--ink);}
+  .bookcard .meta .bst{color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin-top:3px;}
   .bookcard .meta .bsub{color:var(--muted);font-size:13px;margin-top:3px;flex:1;}
   .buy{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;margin-top:10px;width:34px;height:34px;border-radius:50%;color:var(--accent-deep);text-decoration:none;background:#FCE7F1;border:1px solid #F6C9DE;transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s ease;}
   .buy svg{width:17px;height:17px;flex:0 0 auto;}
@@ -311,7 +312,7 @@ const journalZh = {
 const roleLabel = {"단독":{en:"Sole",zh:"独著"},"공동":{en:"Co-author",zh:"合著"},"공동(제1)":{en:"First author",zh:"第一作者"}};
 // [제목ko, 제목en, 게재지ko, 게재지en, "권면", "연.월.", 역할, 링크("#"=비움), 제목zh]
 const papers = [
-  ["馮夢龍 ≪笑府≫ 形體部의 신체와 웃음 ― 핵심도(Keyness) 분석과 ‘몸의 세 경계’ 정독을 결합하여","Body and Laughter in the Xingti Section of Feng Menglong’s Xiaofu: Combining Keyness Analysis with a Close Reading of the “Three Boundaries of the Body”","중국학논총","Journal of Chinese Studies","93","2026.09.","단독","#","馮夢龍《笑府》形體部中的身體與笑——結合關鍵度（Keyness）分析與「身體的三重邊界」細讀"],
+  ["馮夢龍 ≪笑府≫ 形體部의 신체와 웃음 ― 핵심도(Keyness) 분석과 ‘몸의 세 경계’ 정독을 결합하여","The Body and Laughter in the Xingti bu of Feng Menglong’s Xiaofu: Combining Keyness Analysis with a Close Reading of the ‘Three Boundaries of the Body’","중국학논총","Journal of Chinese Studies","93, 169–200","2026.09.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003385011","馮夢龍《笑府》形體部中的身體與笑——結合關鍵度（Keyness）分析與「身體的三重邊界」細讀"],
   ["明末 笑話書 탐색 ― 趙南星 『笑贊』의 ‘贊’ 문체를 중심으로","An Exploration of Late Ming Xiaohua Books: The Zan Style in Zhao Nanxing’s Xiaozan","중어중문학","Korea Journal of Chinese Language and Literature","104, 3–29","2026.06.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003354133","明末笑話書探索——以趙南星《笑贊》的「贊」體為中心"],
   ["≪池北偶談≫ 卷2 〈談獻 1〉의 번역과 주해 (1)","Translation and Annotation of “Tanxian 1” in Chibeioutan, Juan 2 (1)","열린정신 인문학 연구","Wonkwang Journal of Humanities","27(1), 69–96","2026.04.","공동","https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003335882","《池北偶談》卷二〈談獻一〉譯注（一）"],
   ["이질과 체계의 공존: 『山中一夕話』 下集의 문체와 편제 고찰","Coexistence of Heterogeneity and System: Style and Editorial Structure in the Second Collection of Shanzhong Yixihua","인간연구","Journal of Human Studies","58, 179–211","2026.04.","단독","https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003331376","異質與體系的共存：《山中一夕話》下集的文體與編次考察"],
@@ -345,8 +346,10 @@ const papers = [
   ["≪西湖夢尋≫의 註釋과 飜譯 (1)","Translations and Annotations of Xihu Mengxun (1)","중국학논총","Journal of Chinese Studies","58, 467–492","2017.12.","단독","#","《西湖夢尋》注釋與翻譯（一）"],
   ["金聖嘆 ≪天下才子必讀書≫의 原文 加工 樣相","Jin Shengtan’s Text Processing in the Anthology of Classical Chinese Essays","중국학논총","The Journal of Sinology","40, 109–132","2013.12.","단독","#","金聖嘆《天下才子必讀書》的原文加工樣態"],
 ];
-// [제목ko, 제목en, "원저자·출판사 ko", "...en", 연도, 역할ko, 역할en, 표지, 링크, 제목zh, "원저자·출판사 zh", 역할zh]
+// [제목ko, 제목en, "원저자·출판사 ko", "...en", 연도, 역할ko, 역할en, 표지, 링크, 제목zh, "원저자·출판사 zh", 역할zh, {부제 ko/en/zh}]
 const translations = [
+  ["처음 읽는 금병매 강의","Lectures on Jin Ping Mei for First-Time Readers","황림 · 학고방","Huang Lin · Hakgobang",2026,"공역","Co-trans.","https://contents.kyobobook.co.kr/sih/fit-in/400x0/pdt/9791169958134.jpg","https://product.kyobobook.co.kr/detail/S000221569896","《金瓶梅講演錄》韓譯本","黃霖，Hakgobang","合译",{ko:"황림 교수가 들려주는 인간의 욕망과 명말 사회의 모든 것",en:"Professor Huang Lin on Human Desire and Late Ming Society",zh:"黃霖教授講述人的欲望與晚明社會"}],
+  ["시대가 기억한 사람들","People Remembered by Their Times","문예원","Munyewon",2026,"공역","Co-trans.","https://contents.kyobobook.co.kr/sih/fit-in/400x0/pdt/9791190587785.jpg","https://product.kyobobook.co.kr/detail/S000221805891","《時代記住的人們》韓譯本","Munyewon","合译",{ko:"명청 문인들이 기록한 사람과 삶",en:"People and Lives Recorded by Ming–Qing Literati",zh:"明清文人筆下的人與人生"}],
   ["서호몽심 (西湖夢尋)","Xihu Mengxun","역락","Yeokrak",2024,"","","b1.jpg","https://product.kyobobook.co.kr/detail/S000214815468","《西湖夢尋》韓譯本","張岱，Yeokrak",""],
   ["池北偶談: 談故 1","Chibeioutan: Tangu 1","王士禛 · 퍼플","Wang Shizhen · Purple",2024,"공역","Co-trans.","","#","《池北偶談·談故一》韓譯本","王士禛，Purple","合译"],
   ["도암몽억 (陶庵夢憶)","Tao'an Mengyi","張岱 · 세창출판사","Zhang Dai · Sechang",2020,"","","b2.jpg","https://product.kyobobook.co.kr/detail/S000001303469","《陶庵夢憶》韓譯本","張岱，Sechang",""],
@@ -397,7 +400,7 @@ function render(){
   document.getElementById('papers').innerHTML =
     `<ul class="paperlist">${papers.slice().sort((a,b)=>b[5].localeCompare(a[5])).map(itemHtml).join('')}</ul>`;
 
-  document.getElementById('translations').innerHTML = translations.map(([ko,en,subko,suben,y,roleko,roleen,img,link,zh,subzh,rolezh])=>{
+  document.getElementById('translations').innerHTML = translations.map(([ko,en,subko,suben,y,roleko,roleen,img,link,zh,subzh,rolezh,subt])=>{
     const t = (lang==='en' && en) ? en : (lang==='zh' && zh) ? zh : ko;
     const sub = (lang==='en') ? suben : (lang==='zh') ? (subzh || suben) : subko;
     const role = (lang==='en') ? roleen : (lang==='zh') ? rolezh : roleko;
@@ -412,7 +415,8 @@ function render(){
     const buyBtn = linked
       ? `<a class="buy" href="${href}" target="_blank" rel="noopener" aria-label="${esc(t)}">${icon}</a>`
       : `<span class="buy off">${icon}</span>`;
-    return `<div class="bookcard">${coverTag}<div class="meta"><div class="bt">${esc(t)}</div><div class="bsub">${meta}</div>${buyBtn}</div></div>`;
+    const st = (subt && subt[lang]) ? `<div class="bst">${esc(subt[lang])}</div>` : '';
+    return `<div class="bookcard">${coverTag}<div class="meta"><div class="bt">${esc(t)}</div>${st}<div class="bsub">${meta}</div>${buyBtn}</div></div>`;
   }).join('');
 
   document.getElementById('authored').innerHTML = authored.map(([ko,en,subko,suben,link,zh,subzh])=>{
